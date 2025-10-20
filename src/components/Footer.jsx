@@ -4,9 +4,10 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/f
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-white text-[#171717] py-16 px-24 border-t border-gray-200">
+<footer className="w-full bg-white text-[#171717] py-[72px] px-[86px] border-t border-gray-200">
+
       {/* Container الرئيسي */}
-      <div className="max-w-[1440px] mx-auto flex flex-row-reverse gap-12">
+      <div className="max-w-[1440px] mx-auto flex flex-row-reverse gap-[47px]">
 
         {/* العمود 1 - Contact */}
         <div className="flex-[1]">
@@ -22,7 +23,7 @@ export default function Footer() {
             <li>Web Development</li>
             <li>UI/UX Design</li>
             <li>Mobile Apps</li>
-            <li>Maintenance & Support </li>
+            <li>Maintenance & Support</li>
           </ul>
         </div>
 
