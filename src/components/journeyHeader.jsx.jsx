@@ -3,7 +3,7 @@
 
 export default function JourneyHeader() {
   return (
-    <div className="w-[1440px] flex flex-col items-center justify-center mx-auto text-center">
+    <div className="w-full max-w-[1440px] flex flex-col items-center justify-center mx-auto text-center">
       {/* الجزء العلوي: الخطين والعنوان */}
       <div className="flex items-center justify-center w-full h-[40px]">
         {/* الخط اليمين */}

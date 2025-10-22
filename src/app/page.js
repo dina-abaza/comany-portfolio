@@ -18,6 +18,8 @@ export default function Home() {
      <JourneySection/>
    <div className="flex justify-center my-10">
   <PrimaryButton href={"/contact"} />
+
+
   </div>
 
   </div>

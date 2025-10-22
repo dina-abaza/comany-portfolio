@@ -1,11 +1,10 @@
 "use client";
 import {
-  Search,        // العدسة
-  PencilRuler,   // للتصميم والتخطيط
-  Code2,         // كود </>
-  ClipboardCheck, // النوتة بالعدسة الصغيرة
-  Rocket,        // الصاروخ
-  Palette,       // أيقونة بالألوان للرسم
+  Search,         
+  Code2,         
+  ClipboardCheck,
+  Rocket,        
+  Palette,      
 } from "lucide-react";
 
 
@@ -13,7 +12,7 @@ export default function JourneySection() {
   const steps = [
     {
       title: "DISCOVERY",
-      text: "A SESSION TO UNDERSTAND YOUR IDEA, THE GOALS OF YOUR PROJECT, AND THE NEEDS OF YOUR AUDIENCE. WE IDENTIFY THE CHALLENGES AND OUTLINE A CLEAR PLAN.",
+      text: "A session to understand your idea, the goals of your project, and the needs of your audience. We identify the challenges and outline a clear plan.",
       icon: <Search className="text-[#FFAE42] w-[80px] h-[80px]" />,
       align: "left",
     },
@@ -44,7 +43,7 @@ export default function JourneySection() {
   ];
 
   return (
-    <div className="relative w-[1440px] mx-auto flex flex-col items-center justify-between py-10 overflow-hidden">
+    <div className="relative w-full max-w-[1440px] mx-auto flex flex-col items-center justify-between py-10 overflow-hidden">
       {/* الخلفية */}
       <div className="absolute inset-0 bg-transparent -z-10" 
        style={{

@@ -2,7 +2,7 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect} from "react";
 
 export default function ImagesHome() {
   const images = [
@@ -37,15 +37,16 @@ export default function ImagesHome() {
     const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % images.length);
       setAnimIndex(Math.floor(Math.random() * animations.length)); // حركة عشوائية كل مرة
-    }, 5000);
+    }, 4000);
 
     return () => clearInterval(timer);
   }, [images.length]);
 
-  const currentAnimation = useMemo(() => animations[animIndex], [animIndex]);
+const currentAnimation = animations[animIndex];
+
 
   return (
-    <section className="relative w-[1440px] h-[512px] overflow-hidden mx-auto rounded-2xl">
+    <section className="relative w-full max-w-[1440px] h-[512px] overflow-hidden mx-auto rounded-2xl">
       {/* الصور */}
       <div className="relative w-full h-full perspective-[1200px]">
         <AnimatePresence mode="sync">
