@@ -1,5 +1,3 @@
-// tailwind.config.js
-
 /** @type {import('tailwindcss').Config} */
 const config = {
   content: [
@@ -8,11 +6,9 @@ const config = {
   theme: {
     extend: {
       colors: {
-        aurora: {
-          light: "#BBFF00",
-          DEFAULT: "#70D900",
-          dark: "#10A700",
-        },
+        "aurora-light": "rgba(184, 255, 0, 1)",   // البداية الفاتحة
+        "aurora-mid":   "rgba(136, 230, 0, 1)",   // الوسط
+        "aurora-dark":  "rgba(16, 167, 0, 1)",    // النهاية الغامقة
       },
     },
   },
