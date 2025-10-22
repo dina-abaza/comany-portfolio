@@ -1,7 +1,10 @@
-import Header from "@/components/HeaderHome";
+import Header from "@/components/Header";
 import ImagesHome from "@/components/ImagesHome";
 import ButtonsHome from "@/components/ButtonsHome";
 import DescriptionHome from "@/components/DescriptionHome";
+import JourneyHeader from "@/components/journeyHeader.jsx";
+import JourneySection from "@/components/journeySection";
+import PrimaryButton from "@/components/buttons/PrimaryButton";
 export default function Home() {
   return (
   <div className="flex flex-col gap-10">
@@ -11,6 +14,12 @@ export default function Home() {
      <ImagesHome/>
      <ButtonsHome/>
      <DescriptionHome/>
+     <JourneyHeader/>
+     <JourneySection/>
+   <div className="flex justify-center my-10">
+  <PrimaryButton href={"/contact"} />
+  </div>
+
   </div>
   );
 }
