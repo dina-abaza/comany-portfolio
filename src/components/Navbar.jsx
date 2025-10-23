@@ -42,6 +42,7 @@ export default function Navbar() {
               >
                 {/* البوردر المتدرج */}
                 <span className="absolute inset-0 rounded-full p-[1px] bg-[linear-gradient(145deg,rgba(255,255,255,0.8)_0%,rgba(255,255,255,0.2)_50%,rgba(0,0,0,0)_100%)]">
+
                   <span
                     className={`absolute inset-[1px] rounded-full transition-all duration-300 ${
                       active === i

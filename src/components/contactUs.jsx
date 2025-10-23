@@ -1,5 +1,55 @@
+"use client";
 import { LuPhone, LuMail, LuMapPin, LuPin, LuFacebook, LuInstagram, LuTwitter, LuLinkedin } from "react-icons/lu";
+import  { useState } from 'react';
+import { ToastContainer, toast, Slide } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 export default function Com_ContactUs() {
+    const [formData, setFormData] = useState({
+        fullName: '',
+        email: '',
+        phone: '',
+        ideaDescription: ''
+    });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prevState => ({
+            ...prevState,
+            [name]: value
+        }));
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        console.log('Form Data Submitted:', formData);
+
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                toast.success('Message sent successfully!');
+                setFormData({
+                    fullName: '',
+                    email: '',
+                    phone: '',
+                    ideaDescription: ''
+                });
+            } else {
+                toast.error('Failed to send message.');
+            }
+        } catch (error) {
+            console.error('Error submitting form:', error);
+            toast.error('An error occurred while sending the message.');
+        }
+    };
+
     return (
         <section className="py-20 px-6 md:px-12 lg:px-24 font-sans w-full">
             <div className="mx-auto flex flex-col justify-center lg:items-center">
@@ -18,27 +68,43 @@ export default function Com_ContactUs() {
                 <div className="flex flex-col sm:flex-row gap-9 md:gap-10 justify-center items-start w-full">
 
                     {/* النموذج */}
-                    <form className="space-y-6 w-full sm:w-[573px] font-bold text-black bg-[#fff] p-[32px] flex flex-col gap-[32px] rounded-[16px] h-auto sm:h-[798px]">
+                    <form onSubmit={handleSubmit} className="space-y-6 w-full sm:w-[573px] font-bold text-black bg-[#fff] p-[32px] flex flex-col gap-[32px] rounded-[16px] h-auto sm:h-[798px]">
                         <input
                             type="text"
+                            name="fullName"
+                            required
                             placeholder="FULL NAME"
-                            className="w-full border border-gray-300 rounded-[16px] px-4 py-3 text-black focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            value={formData.fullName}
+                            onChange={handleChange}
+                            className="placeholder:text-[#000] placeholder:text-[16px]- w-full border-[2px] border-black rounded-[16px] px-[16px] py-[8px] text-black focus:outline-none focus:ring-2 focus:ring-blue-500"
                         />
                         <input
                             type="email"
+                            name="email"
+                            required
                             placeholder="Your Email"
-                            className="w-full border border-gray-300 rounded-[16px] px-4 py-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            value={formData.email}
+                            onChange={handleChange}
+                            className="placeholder:text-[#000] placeholder:text-[16px]- w-full border-[2px] border-black rounded-[16px] px-[16px] py-[8px] text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         />
                         <input
                             type="tel"
+                            name="phone"
+                            required
                             placeholder="PHONE"
-                            className="w-full border border-gray-300 rounded-[16px] px-4 py-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            value={formData.phone}
+                            onChange={handleChange}
+                            className="placeholder:text-[#000] placeholder:text-[16px] w-full border-[2px] border-black rounded-[16px] px-[16px] py-[8px] text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         />
-                        <p className="text-[#000] font-bold">A brief description of the idea</p>
+                        <p className="text-[#000] font-bold text-[16px]">A brief description of the idea</p>
                         <textarea
                             rows="5"
+                            name="ideaDescription"
+                            required
                             placeholder="Add text"
-                            className="w-full border border-gray-300 rounded-[16px] px-4 py-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            value={formData.ideaDescription}
+                            onChange={handleChange}
+                            className="placeholder:text-[#424242] placeholder:text-[14px] placeholder:font-normal border-[2px] border-black rounded-[16px] px-[16px] py-[8px] text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         />
                         <button
                             type="submit"
@@ -104,23 +170,23 @@ export default function Com_ContactUs() {
 
                 {/* قسم الأسئلة FAQ */}
                 <div className="w-full lg:w-[1264px] bg-[#fff] p-[32px] flex flex-col gap-5 text-[#000] rounded-[16px] justify-center text-left mt-10">
-                    <p className="font-bold">FAQ</p>
-                    <p>
+                    <p className="font-bold text-[24px] mb-[32px]">FAQ</p>
+                    <p className="font-bold text-[18px]">
                         Do I need to have a complete idea?
-                        <span className="text-[#424242]"> No, we help you from the very first stage.</span>
+                        <span className="text-[#424242] font-normal"> No, we help you from the very first stage.</span>
                     </p>
-                    <p>
+                    <p className="font-bold text-[18px]">
                         Do you provide support after delivery?
-                        <span className="text-[#424242]"> Yes, we offer maintenance packages.</span>
+                        <span className="text-[#424242] font-normal"> Yes, we offer maintenance packages.</span>
                     </p>
-                    <p>
+                    <p className="font-bold text-[18px]">
                         Is it possible for you to start with a small project?
-                        <span className="text-[#424242]"> Of course, we work with startups and individuals.</span>
+                        <span className="text-[#424242] font-normal"> Of course, we work with startups and individuals.</span>
                     </p>
                 </div>
 
             </div>
+            <ToastContainer position="bottom-right" autoClose={5000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover theme="light" transition={Slide} />
         </section>
-
     );
 }
