@@ -1,13 +1,14 @@
 import PrimaryButton from './buttons/PrimaryButton';
+import Header from './Header';
 const Com_AboutPage = () => {
     return (
-        <div className="bg-black text-white">
+        <div className="bg-black text-white py-4 w-full max-w-[1440px]">
             {/* هنا سيتم تضمين المكونات المختلفة لصفحة من نحن */}
-            <section className="py-16 px-4 md:px-8 lg:px-16 text-center">
-                <h1 className="text-4xl md:text-5xl font-bold text-[#10A700] mb-4">WE ARE A COMPREHENSIVE DESIGN AND DEVELOPMENT TEAM</h1>
-                <h2 className="text-2xl md:text-3xl font-bold text-[#10A700] mb-8">DEDICATED TO CREATING SUCCESSFUL DIGITAL EXPERIENCES.</h2>
-                <p className="text-lg md:text-xl text-white max-w-3xl mx-auto">FROM DESIGN TO PROGRAMMING AND DELIVERY, WE WORK TOGETHER AS ONE TEAM TO TRANSFORM YOUR IDEA INTO A REAL DIGITAL PRODUCT.</p>
-            </section>
+
+            <Header title={"WE ARE A COMPREHENSIVE DESIGN AND DEVELOPMENT TEAM DEDICATED TO CREATING SUCCESSFUL DIGITAL EXPERIENCES."}
+            description={"FROM DESIGN TO PROGRAMMING AND DELIVERY, WE WORK TOGETHER AS ONE TEAM TO TRANSFORM YOUR IDEA INTO A REAL DIGITAL PRODUCT."}
+            />
+        
 
             {/* Team Section */}
             <section className="py-16 px-4 md:px-8 lg:px-16 bg-black">

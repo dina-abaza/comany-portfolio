@@ -3,6 +3,7 @@ import { LuPhone, LuMail, LuMapPin, LuPin, LuFacebook, LuInstagram, LuTwitter, L
 import  { useState } from 'react';
 import { ToastContainer, toast, Slide } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Header from "./Header";
 
 export default function Com_ContactUs() {
     const [formData, setFormData] = useState({
@@ -51,18 +52,14 @@ export default function Com_ContactUs() {
     };
 
     return (
-        <section className="py-20 px-6 md:px-12 lg:px-24 font-sans w-full">
-            <div className="mx-auto flex flex-col justify-center lg:items-center">
-
-                {/* العنوان والوصف */}
-                <div className="text-center flex flex-col items-center mb-16">
-                    <h2 className="text-4xl font-bold text-[#10A700] mb-4">
-                        Start your project with us today
-                    </h2>
-                    <p className="mb-10 text-[#FFFFFF] max-w-[700px]">
-                        Whether you have a new idea or an existing project that needs development, our team is ready to help you build a successful digital experience.
-                    </p>
-                </div>
+      
+<section className="w-full overflow-x-hidden font-sans mb-10 -mt-6 flex justify-center">
+  <div className="w-full max-w-[1440px] px-6 md:px-12 lg:px-24 mx-auto flex flex-col justify-center items-center">
+    
+    <Header
+      title="START YOUR PROJECT WITH US TODAY"
+      description="Whether you have a new idea or an existing project that needs development, our team is ready to help you build a successful digital experience."
+    />
 
                 {/* الفورم + معلومات التواصل */}
                 <div className="flex flex-col sm:flex-row gap-9 md:gap-10 justify-center items-start w-full">
