@@ -3,7 +3,7 @@
 export default function Header({ title, description }) {
   return (
     <div
-      className="w-full max-w-[1264px] h-[283px] mx-auto my-4
+      className="w-full max-w-[1264px] h-[283px] mx-auto my-6
                  bg-black/50 backdrop-blur-xl rounded-lg
                  flex flex-col justify-center items-center p-8 shadow-2xl"
     >

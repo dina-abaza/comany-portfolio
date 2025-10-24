@@ -2,7 +2,7 @@ import PrimaryButton from './buttons/PrimaryButton';
 import Header from './Header';
 const Com_AboutPage = () => {
     return (
-        <div className="bg-black text-white py-4 w-full max-w-[1440px]">
+        <div className="bg-black text-white py-4 w-full max-w-[1440px] mt-6">
             {/* هنا سيتم تضمين المكونات المختلفة لصفحة من نحن */}
 
             <Header title={"WE ARE A COMPREHENSIVE DESIGN AND DEVELOPMENT TEAM DEDICATED TO CREATING SUCCESSFUL DIGITAL EXPERIENCES."}
