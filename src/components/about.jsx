@@ -146,7 +146,7 @@ const Com_AboutPage = () => {
                     <div className="flex justify-center gap-4">
                       <PrimaryButton href="/contact" />
                         {/* <button className="bg-[#10A700] text-black font-bold py-3 px-6 rounded-lg hover:bg-green-600 transition">START YOUR PROJECT NOW</button> */}
-                        <button className="border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white hover:text-black transition">CONTACT US</button>
+                
                     </div>
                 </div>
             </section>

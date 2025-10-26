@@ -3,8 +3,8 @@ import Link from "next/link";
 export default function PrimaryButton({ href }) {
   return (
     <Link href={href}>
-      <button className="w-[230px] h-[45px]  rounded-xl 
-        bg-gradient-to-r from-[#88E600] to-[#10A700] text-black font-bold text-[18px]
+      <button className="max-w-[208] md:max-w-[230px] min-h-[45px]   whitespace-nowrap rounded-xl py-[10px] px-[16px]
+        bg-gradient-to-r from-[#88E600] to-[#10A700] text-black font-bold text-[16px] md:text-[18px]
         transition-all duration-300 hover:opacity-90">
       start your project now
       </button>

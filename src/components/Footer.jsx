@@ -4,46 +4,15 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/f
 
 export default function Footer() {
   return (
-<footer className="w-full bg-white text-[#171717] py-[72px] px-[86px] border-t border-gray-200">
+<footer className="w-full bg-white text-[#171717] py-[50px] px-4 sm:px-6 lg:px-[86px] border-t border-gray-200">
 
       {/* Container الرئيسي */}
-      <div className="max-w-[1440px] mx-auto flex flex-row-reverse gap-[47px]">
+      <div className="max-w-[1440px] mx-auto flex flex-wrap  justify-between gap-[20px] md:gap-[30px]">
 
         {/* العمود 1 - Contact */}
-        <div className="flex-[1]">
-          <h3 className="text-lg font-semibold mb-6">Contact</h3>
-          <p className="text-[#A3A3A3] mb-2 text-sm">Phone: +1 234 567 890</p>
-          <p className="text-[#A3A3A3] text-sm">Email: info@aurora.com</p>
-        </div>
-
-        {/* العمود 2 - Services */}
-        <div className="flex-[1]">
-          <h3 className="text-lg font-semibold mb-6">Services</h3>
-          <ul className="space-y-2 text-[#A3A3A3] text-sm">
-            <li>Web Development</li>
-            <li>UI/UX Design</li>
-            <li>Mobile Apps</li>
-            <li>Maintenance & Support</li>
-          </ul>
-        </div>
-
-        {/* العمود 3 - Our Links */}
-        <div className="flex-[1]">
-          <h3 className="text-lg font-semibold mb-6">Our Links</h3>
-          <ul className="space-y-2 text-[#A3A3A3] text-sm">
-            <li><Link href="/">Home</Link></li>
-            <li><Link href="/services">Services</Link></li>
-            <li><Link href="/our-work">Our Work</Link></li>
-            <li><Link href="/projects">Projects</Link></li>
-            <li><Link href="/about">About Us</Link></li>
-            <li><Link href="/contact">Contact Us</Link></li>
-          </ul>
-        </div>
-
-        {/* العمود 4 - About & Social Media */}
-        <div className="flex-[1.5]">
+           <div className="flex-[1] md:min-w-[300px] ">
           <h3 className="text-lg font-semibold mb-4">About the Team</h3>
-          <p className="text-[#A3A3A3] text-sm leading-relaxed text-justify mb-8 uppercase">
+          <p className="text-[#8C8C8C] text-sm leading-relaxed mb-8 ">
             a full design and development team (UI/UX, Frontend, Backend, Flutter). We help you build your digital project from idea to launch and beyond.
           </p>
 
@@ -83,10 +52,40 @@ export default function Footer() {
             </a>
           </div>
         </div>
+
+        {/* العمود 2 - Services */}
+        <div className="flex-[1] md:min-w-[250px]">
+          <h3 className="text-lg font-semibold mb-6">Services</h3>
+          <ul className="space-y-2 text-[#8C8C8C] text-sm">
+            <li>Web Development</li>
+            <li>UI/UX Design</li>
+            <li>Mobile Apps</li>
+            <li>Maintenance & Support</li>
+          </ul>
+        </div>
+
+        {/* العمود 3 - Our Links */}
+        <div className="flex-[1] md:min-w-[250px]">
+          <h3 className="text-lg font-semibold mb-6 whitespace-nowrap">Our Links</h3>
+          <ul className="space-y-2 text-[#8C8C8C] text-sm">
+            <li><Link href="/">Home</Link></li>
+            <li><Link href="/services">Services</Link></li>
+            <li><Link href="/our-work">Our Work</Link></li>
+            <li><Link href="/about">About Us</Link></li>
+            <li><Link href="/contact">Contact Us</Link></li>
+          </ul>
+        </div>
+
+      <div className="flex-[1] md:min-w-[250px]">
+          <h3 className="text-lg font-semibold mb-6">Contact</h3>
+          <p className="text-[#8C8C8C] mb-2 text-sm">Phone: +1 234 567 890</p>
+          <p className="text-[#8C8C8C] text-sm">Email: info@aurora.com</p>
+        </div>
+     
       </div>
 
       {/* الخط الفاصل السفلي */}
-      <div className="mt-12 border-t border-gray-200 pt-6 text-center text-[#A3A3A3] text-sm">
+      <div className="mt-12 border-t border-gray-200 pt-6 text-center text-[#8C8C8c] text-sm">
         © 2025 Aurora Software House. All rights reserved.
       </div>
     </footer>

@@ -46,7 +46,7 @@ const currentAnimation = animations[animIndex];
 
 
   return (
-    <section className="relative w-full max-w-[1440px] h-[512px] overflow-hidden mx-auto">
+    <section className="relative w-full max-w-[1440px] h-[250px] md:h-[512px] overflow-hidden mx-auto">
       {/* الصور */}
       <div className="relative w-full h-full perspective-[1200px]">
         <AnimatePresence mode="sync">
@@ -64,11 +64,11 @@ const currentAnimation = animations[animIndex];
       </div>
 
       {/* النصوص */}
-      <div className="absolute inset-0 flex flex-col justify-center items-center p-8 bg-black/30 backdrop-blur-[2px]">
-        <h1 className="text-[30px] font-bold text-white text-center w-[874px] drop-shadow-lg">
+      <div className="absolute inset-0 mih-h[78px] flex flex-col justify-center items-center p-8 bg-black/30 backdrop-blur-[2px]">
+        <h1 className="text-[16px] md:text-[30px] font-bold text-white text-center max-w-[874px] drop-shadow-lg">
           "websites that elevate your business"
         </h1>
-        <h3 className="text-[20px] text-gray-200 font-semibold mt-4 text-center w-[1000px] drop-shadow-md">
+        <h3 className="text-[14px] md:text-[20px] text-gray-200 font-semibold mt-5 text-center max-w-[1000px] drop-shadow-md ">
           we craft modern, fast and user friendly websites that make your
           <span className="block text-center">brand stand out</span>
         </h3>

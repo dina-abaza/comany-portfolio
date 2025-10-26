@@ -7,7 +7,7 @@ import JourneySection from "@/components/journeySection";
 import PrimaryButton from "@/components/buttons/PrimaryButton";
 export default function Home() {
   return (
-  <div className="flex flex-col gap-10">
+  <div className="flex flex-col gap-10   ">
     <Header title="a comprehensive design and programming team to build your next project"
      description="from ui/ux to frontend,backend and flutter development  we provide you  with every thing you need to turn your idea into a live and successful product."/>
 
@@ -16,7 +16,7 @@ export default function Home() {
      <DescriptionHome/>
      <JourneyHeader/>
      <JourneySection/>
-   <div className="flex justify-center my-10">
+   <div className="flex justify-center items-center mb-10">
   <PrimaryButton href={"/contact"} />
 
 
