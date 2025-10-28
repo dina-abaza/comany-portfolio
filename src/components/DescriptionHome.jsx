@@ -3,7 +3,7 @@
 export default function DescriptionHome() {
   return (
     <div
-      className="w-full max-w-[1440px] min-h-[264px] md:min-h-[234px] bg-white mx-auto my-18 py-[40px] md:py-[72px] px-[45px] md:px-[86px] flex flex-col items-center justify-center"
+      className="w-full min-h-[264px] md:min-h-[234px] bg-white mx-auto my-18 py-[40px] md:py-[72px] px-[45px] md:px-[86px] flex flex-col items-center justify-center"
     >
 
       <h4 className="max-w-[1260px] h-[24px] md:h-[40px] text-gray-900 text-[16px] md:text-[24px] font-bold text-center">

@@ -1,9 +1,16 @@
 "use client";
 import { LuPhone, LuMail, LuMapPin, LuPin, LuFacebook, LuInstagram, LuTwitter, LuLinkedin } from "react-icons/lu";
-import  { useState } from 'react';
+import { useState } from 'react';
 import { ToastContainer, toast, Slide } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Header from "./Header";
+import { Inter } from "next/font/google";
+
+const inter = Inter({
+    subsets: ["latin"],
+    display: "swap",
+  });
+  
 
 export default function Com_ContactUs() {
     const [formData, setFormData] = useState({
@@ -12,6 +19,8 @@ export default function Com_ContactUs() {
         phone: '',
         ideaDescription: ''
     });
+
+
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -52,20 +61,30 @@ export default function Com_ContactUs() {
     };
 
     return (
-      
-<section className="w-full overflow-x-hidden font-sans mb-10 -mt-6 flex justify-center">
-  <div className="w-full max-w-[1440px] px-6 md:px-12 lg:px-24 mx-auto flex flex-col justify-center items-center mt-10">
-    
-    <Header
-      title="START YOUR PROJECT WITH US TODAY"
-      description="Whether you have a new idea or an existing project that needs development, our team is ready to help you build a successful digital experience."
-    />
+
+        <section className="w-full overflow-x-hidden font-sans mb-10 -mt-6 flex justify-center">
+            <div className="w-full max-w-[1440px] px-6 md:px-12 lg:px-24 mx-auto flex flex-col justify-center items-center mt-10">
+
+                <Header
+                    title="START YOUR PROJECT WITH US TODAY"
+                    description="Whether you have a new idea or an existing project that needs development, our team is ready to help you build a successful digital experience."
+                />
 
                 {/* الفورم + معلومات التواصل */}
                 <div className="flex flex-col sm:flex-row gap-9 md:gap-10 justify-center items-start w-full">
 
                     {/* النموذج */}
                     <form onSubmit={handleSubmit} className="space-y-6 w-full sm:w-[573px] font-bold text-black bg-[#fff] p-[32px] flex flex-col gap-[32px] rounded-[16px] h-auto sm:h-[798px]">
+
+                        <h5 className={`text-[20px] font-bold ${inter.className}
+                        `}>
+                            Start Your Project
+                        </h5>
+
+                        <p className={`text-[14px] font-normal ${inter.className}`}>
+                        Tell us about your project and let's create something extraordinary together.
+                        </p>
+
                         <input
                             type="text"
                             name="fullName"
@@ -73,7 +92,7 @@ export default function Com_ContactUs() {
                             placeholder="FULL NAME"
                             value={formData.fullName}
                             onChange={handleChange}
-                            className="placeholder:text-[#000] placeholder:text-[16px]- w-full border-[2px] border-black rounded-[16px] px-[16px] py-[8px] text-black focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            className="placeholder:text-[#000] placeholder:text-[16px]- w-full border-[2px] m-0 border-black rounded-[16px] px-[16px] py-[8px] text-black focus:outline-none focus:ring-2 focus:ring-black-500"
                         />
                         <input
                             type="email"
@@ -82,7 +101,7 @@ export default function Com_ContactUs() {
                             placeholder="Your Email"
                             value={formData.email}
                             onChange={handleChange}
-                            className="placeholder:text-[#000] placeholder:text-[16px]- w-full border-[2px] border-black rounded-[16px] px-[16px] py-[8px] text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            className="placeholder:text-[#000] placeholder:text-[16px]- w-full border-[2px] m-0 border-black rounded-[16px] px-[16px] py-[8px] text-gray-700 focus:outline-none focus:ring-2 focus:ring-red-500"
                         />
                         <input
                             type="tel"
@@ -91,7 +110,7 @@ export default function Com_ContactUs() {
                             placeholder="PHONE"
                             value={formData.phone}
                             onChange={handleChange}
-                            className="placeholder:text-[#000] placeholder:text-[16px] w-full border-[2px] border-black rounded-[16px] px-[16px] py-[8px] text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            className="placeholder:text-[#000] placeholder:text-[16px] w-full border-[2px] border-black rounded-[16px] px-[16px] py-[8px] text-gray-700 focus:outline-none focus:ring-2 m-0 focus:ring-red-500"
                         />
                         <p className="text-[#000] font-bold text-[16px]">A brief description of the idea</p>
                         <textarea
@@ -101,7 +120,7 @@ export default function Com_ContactUs() {
                             placeholder="Add text"
                             value={formData.ideaDescription}
                             onChange={handleChange}
-                            className="placeholder:text-[#424242 ] placeholder:text-[14px] placeholder:font-normal border-[2px] border-black rounded-[16px] px-[16px] py-[8px] text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            className="placeholder:text-[#424242] placeholder:text-[14px] placeholder:font-normal border-[2px] border-black rounded-[16px] px-[16px] py-[8px] m-0 h-[235px] text-gray-700 focus:outline-none focus:ring-2 focus:ring-red-500"
                         />
                         <button
                             type="submit"
