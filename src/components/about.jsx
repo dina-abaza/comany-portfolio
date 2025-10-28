@@ -2,7 +2,7 @@ import PrimaryButton from './buttons/PrimaryButton';
 import Header from './Header';
 const Com_AboutPage = () => {
     return (
-        <div className="bg-black text-white py-4 w-full max-w-[1440px] mt-6">
+        <div className="bg-black text-white  w-full max-w-[1440px] mt-10">
             {/* هنا سيتم تضمين المكونات المختلفة لصفحة من نحن */}
 
             <Header title={"WE ARE A COMPREHENSIVE DESIGN AND DEVELOPMENT TEAM DEDICATED TO CREATING SUCCESSFUL DIGITAL EXPERIENCES."}
@@ -16,7 +16,7 @@ const Com_AboutPage = () => {
     {/* الصف الأول */}
     <div className="flex flex-col items-center">
       <img src="/team_photos/Ellipse 8-1.png" alt="Rachda Helmy" className="w-32 h-32 rounded-full object-cover border-2 border-[#10A700]" />
-      <p className="mt-4 text-lg font-semibold">RACHDA HELMY</p>
+      <p className="mt-4 text-lg font-semibold">RAGHDA HELMY</p>
       <p className="text-sm text-gray-400">BACKEND DEVELOPER</p>
     </div>
 

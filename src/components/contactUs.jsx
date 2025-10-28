@@ -54,7 +54,7 @@ export default function Com_ContactUs() {
     return (
       
 <section className="w-full overflow-x-hidden font-sans mb-10 -mt-6 flex justify-center">
-  <div className="w-full max-w-[1440px] px-6 md:px-12 lg:px-24 mx-auto flex flex-col justify-center items-center mt-6">
+  <div className="w-full max-w-[1440px] px-6 md:px-12 lg:px-24 mx-auto flex flex-col justify-center items-center mt-10">
     
     <Header
       title="START YOUR PROJECT WITH US TODAY"

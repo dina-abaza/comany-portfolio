@@ -1,4 +1,3 @@
-
 "use client";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -14,6 +13,7 @@ export default function Navbar() {
     { name: "HOME", path: "/" },
     {
       name: "SERVICES",
+      path: "/services",
       dropdown: [
         { name: "Website Development", path: "/services/website-development" },
         { name: "Mobile Application", path: "/services/mobile-application" },
@@ -21,7 +21,7 @@ export default function Navbar() {
         { name: "Maintenance & Support", path: "/services/maintenance-support" },
       ],
     },
-    { name: "OUR WORK", path: "/our-work" },
+    { name: "OUR WORK", path: "/ourwork" },
     { name: "ABOUT US", path: "/about" },
     { name: "CONTACT US", path: "/contact" },
   ];
@@ -47,7 +47,7 @@ export default function Navbar() {
               <Link
                 href={link.path || "#"}
                 onClick={() => setActive(i)}
-                className={`flex items-center justify-center gap-[6px] w-[140px] h-[44px] rounded-full transition-all duration-300 ${
+                className={`flex items-center justify-center gap-[8px] w-[140px] h-[44px] rounded-full transition-all duration-300 ${
                   active === i ? "text-white" : "text-white/70 hover:text-white"
                 }`}
               >
@@ -115,26 +115,29 @@ export default function Navbar() {
         >
           {tabletLinks.map((link, i) => (
             <li key={i} className="relative">
-              <button
-                onClick={() =>
-                  link.dropdown
-                    ? setOpenDropdown(openDropdown === i ? null : i)
-                    : setActive(i)
-                }
-                className={`flex items-center gap-[6px] hover:text-white transition-colors duration-300 ${
-                  active === i ? "text-white" : ""
-                }`}
-              >
-                {link.name}
+              <div className="flex items-center gap-2">
+                <Link
+                  href={link.path || "#"}
+                  onClick={() => setActive(i)}
+                  className={`flex items-center gap-[6px] hover:text-white transition-colors duration-300 ${
+                    active === i ? "text-white" : ""
+                  }`}
+                >
+                  {link.name}
+                </Link>
+
                 {link.dropdown && (
                   <FaChevronDown
-                    className={`text-[9px] transition-transform duration-300 ${
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setOpenDropdown(openDropdown === i ? null : i);
+                    }}
+                    className={`text-[9px] cursor-pointer transition-transform duration-300 ${
                       openDropdown === i ? "rotate-180" : ""
                     }`}
-                    onClick={() => setActive(null)}
                   />
                 )}
-              </button>
+              </div>
 
               {/* Dropdown */}
               <AnimatePresence>
