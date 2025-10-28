@@ -104,7 +104,7 @@ export default function Com_ContactUs() {
                             placeholder="Add text"
                             value={formData.ideaDescription}
                             onChange={handleChange}
-                            className="placeholder:text-[#424242] placeholder:text-[14px] placeholder:font-normal border-[2px] border-black rounded-[16px] px-[16px] py-[8px] text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            className="placeholder:text-[#424242 ] placeholder:text-[14px] placeholder:font-normal border-[2px] border-black rounded-[16px] px-[16px] py-[8px] text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         />
                         <button
                             type="submit"
