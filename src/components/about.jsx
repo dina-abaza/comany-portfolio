@@ -1,13 +1,14 @@
 import PrimaryButton from './buttons/PrimaryButton';
+import Header from './Header';
 const Com_AboutPage = () => {
     return (
-        <div className="bg-black text-white">
+        <div className="bg-black text-white  w-full max-w-[1440px] mt-10">
             {/* هنا سيتم تضمين المكونات المختلفة لصفحة من نحن */}
-            <section className="py-16 px-4 md:px-8 lg:px-16 text-center">
-                <h1 className="text-4xl md:text-5xl font-bold text-[#10A700] mb-4">WE ARE A COMPREHENSIVE DESIGN AND DEVELOPMENT TEAM</h1>
-                <h2 className="text-2xl md:text-3xl font-bold text-[#10A700] mb-8">DEDICATED TO CREATING SUCCESSFUL DIGITAL EXPERIENCES.</h2>
-                <p className="text-lg md:text-xl text-white max-w-3xl mx-auto">FROM DESIGN TO PROGRAMMING AND DELIVERY, WE WORK TOGETHER AS ONE TEAM TO TRANSFORM YOUR IDEA INTO A REAL DIGITAL PRODUCT.</p>
-            </section>
+
+            <Header title={"WE ARE A COMPREHENSIVE DESIGN AND DEVELOPMENT TEAM DEDICATED TO CREATING SUCCESSFUL DIGITAL EXPERIENCES."}
+            description={"FROM DESIGN TO PROGRAMMING AND DELIVERY, WE WORK TOGETHER AS ONE TEAM TO TRANSFORM YOUR IDEA INTO A REAL DIGITAL PRODUCT."}
+            />
+        
 
             {/* Team Section */}
             <section className="py-16 px-4 md:px-8 lg:px-16 bg-black">
@@ -15,7 +16,7 @@ const Com_AboutPage = () => {
     {/* الصف الأول */}
     <div className="flex flex-col items-center">
       <img src="/team_photos/Ellipse 8-1.png" alt="Rachda Helmy" className="w-32 h-32 rounded-full object-cover border-2 border-[#10A700]" />
-      <p className="mt-4 text-lg font-semibold">RACHDA HELMY</p>
+      <p className="mt-4 text-lg font-semibold">RAGHDA HELMY</p>
       <p className="text-sm text-gray-400">BACKEND DEVELOPER</p>
     </div>
 
@@ -145,7 +146,7 @@ const Com_AboutPage = () => {
                     <div className="flex justify-center gap-4">
                       <PrimaryButton href="/contact" />
                         {/* <button className="bg-[#10A700] text-black font-bold py-3 px-6 rounded-lg hover:bg-green-600 transition">START YOUR PROJECT NOW</button> */}
-                        <button className="border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white hover:text-black transition">CONTACT US</button>
+                
                     </div>
                 </div>
             </section>
