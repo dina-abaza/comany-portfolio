@@ -46,7 +46,7 @@ const currentAnimation = animations[animIndex];
 
 
   return (
-    <section className="relative w-full max-w-[1440px] h-[250px] md:h-[512px] overflow-hidden mx-auto">
+    <section className="relative w-full h-[250px] md:h-[512px] overflow-hidden mx-auto">
       {/* الصور */}
       <div className="relative w-full h-full perspective-[1200px]">
         <AnimatePresence mode="sync">
