@@ -1,11 +1,12 @@
 "use client";
-
+import { useRouter } from "next/navigation";
 import { useState, useRef } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-export default function FilterSection({ filters, items }) {
+export default function FilterSection({ filters, items ,onCardClick}) {
   const [activeFilter, setActiveFilter] = useState("all");
   const scrollRef = useRef(null);
+const router = useRouter();
 
   const filteredItems =
     activeFilter === "all"
@@ -86,7 +87,7 @@ export default function FilterSection({ filters, items }) {
             <div
               className="
                 grid 
-                grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 
+                grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 
                 gap-[20px] p-[20px] 
                 lg:gap-x-[44px] lg:gap-y-[44px] lg:p-0
                 justify-center
@@ -95,14 +96,15 @@ export default function FilterSection({ filters, items }) {
               {filteredItems.map((item) => (
                 <article
                   key={item.id}
+                  onClick={() => onCardClick(item)}
                   className="
-                    group relative overflow-hidden rounded-[12px] shadow-lg transform transition-transform duration-500 hover:scale-[1.04]
+                  cursor-pointer  group relative overflow-hidden rounded-[12px] shadow-lg transform transition-transform duration-500 hover:scale-[1.04]
                     bg-cover bg-center 
                   "
                   style={{
                     backgroundImage: `url(${item.image})`,
                     width: "100%",
-                    height: "180px",
+                    height: "240px",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                   }}

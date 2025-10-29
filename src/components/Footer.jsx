@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn , FaTiktok} from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -21,7 +21,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Our Social Media</h3>
             <div className="flex items-center gap-4 flex-wrap">
-              {[FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn].map((Icon, i) => (
+              {[FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaTiktok ].map((Icon, i) => (
                 <a
                   key={i}
                   href="#"
