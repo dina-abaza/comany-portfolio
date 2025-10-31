@@ -17,7 +17,7 @@ export default function Home() {
      <JourneyHeader/>
      <JourneySection/>
    <div className="flex justify-center items-center mb-12">
-  <PrimaryButton href={"/contact"} />
+  <PrimaryButton href={"/contact"} text= "START YOUR PROJECT NOW" />
 
   </div>
   </div>
