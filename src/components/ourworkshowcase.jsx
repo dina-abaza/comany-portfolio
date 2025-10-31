@@ -133,7 +133,7 @@ export default function OurWorkShowcase() {
             
             </div>
               <div className="flex justify-end">
-                <PrimaryButton href={"/contact"} />
+                <PrimaryButton href={"/contact"} text= "SEE FULL PROJECT" />
               </div>
           </div>
         </div>
@@ -223,8 +223,8 @@ export default function OurWorkShowcase() {
       </section>
 
       <div className="my-[72px] flex justify-center items-center gap-4 ">
-        <PrimaryButton href={"/contact"}/>
-        <SecondaryButton href={"/ourwork"}/>
+        <PrimaryButton href={"/contact"} text= "START YOUR PROJECT NOW" />
+        <SecondaryButton href={"/ourwork"} text= "CONTUCT US"/>
       </div>
     </>
   );

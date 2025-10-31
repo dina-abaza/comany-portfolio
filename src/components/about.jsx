@@ -1,4 +1,5 @@
 import PrimaryButton from './buttons/PrimaryButton';
+import SecondaryButton from "@/components/buttons/SecondaryButton";
 import Header from './Header';
 const Com_AboutPage = () => {
     return (
@@ -28,7 +29,7 @@ const Com_AboutPage = () => {
 
                     <div className="flex flex-col items-center">
                         <img src="/team_photos/Ellipse 8-4.png" alt="Youssef Tame" className="sm:w-[198px] sm:h-[198px] w-32 h-32 rounded-full object-cover border-2 border-[#10A700]" />
-                        <p className="mt-4 text-lg font-semibold">YOUSSEF TAME</p>
+                        <p className="mt-4 text-lg font-semibold">YUSSEF TAIE</p>
                         <p className="text-sm text-gray-400">SOFTWARE DEVELOPER</p>
                     </div>
 
@@ -144,7 +145,8 @@ const Com_AboutPage = () => {
                 <div className="max-w-4xl mx-auto">
                     <h3 className="text-2xl font-bold mb-8">READY TO START WITH OUR TEAM? LET'S BUILD YOUR NEXT PROJECT TOGETHER.</h3>
                     <div className="flex justify-center gap-4">
-                        <PrimaryButton href="/contact" />
+                        <PrimaryButton href={"/contact"} text= "START YOUR PROJECT NOW" />
+                        <SecondaryButton href={"/ourwork"} text= "CONTUCT US"/>
                         {/* <button className="bg-[#10A700] text-black font-bold py-3 px-6 rounded-lg hover:bg-green-600 transition">START YOUR PROJECT NOW</button> */}
 
                     </div>
