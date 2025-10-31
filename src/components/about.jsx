@@ -2,61 +2,61 @@ import PrimaryButton from './buttons/PrimaryButton';
 import Header from './Header';
 const Com_AboutPage = () => {
     return (
-        <div className="bg-black text-white py-4 w-full max-w-[1440px] mt-6">
+        <div className="bg-black text-white  w-full  mt-10">
             {/* هنا سيتم تضمين المكونات المختلفة لصفحة من نحن */}
 
             <Header title={"WE ARE A COMPREHENSIVE DESIGN AND DEVELOPMENT TEAM DEDICATED TO CREATING SUCCESSFUL DIGITAL EXPERIENCES."}
-            description={"FROM DESIGN TO PROGRAMMING AND DELIVERY, WE WORK TOGETHER AS ONE TEAM TO TRANSFORM YOUR IDEA INTO A REAL DIGITAL PRODUCT."}
+                description={"FROM DESIGN TO PROGRAMMING AND DELIVERY, WE WORK TOGETHER AS ONE TEAM TO TRANSFORM YOUR IDEA INTO A REAL DIGITAL PRODUCT."}
             />
-        
+
 
             {/* Team Section */}
             <section className="py-16 px-4 md:px-8 lg:px-16 bg-black">
-  <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-8">
-    {/* الصف الأول */}
-    <div className="flex flex-col items-center">
-      <img src="/team_photos/Ellipse 8-1.png" alt="Rachda Helmy" className="w-32 h-32 rounded-full object-cover border-2 border-[#10A700]" />
-      <p className="mt-4 text-lg font-semibold">RACHDA HELMY</p>
-      <p className="text-sm text-gray-400">BACKEND DEVELOPER</p>
-    </div>
+                <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-8">
+                    {/* الصف الأول */}
+                    <div className="flex flex-col items-center">
+                        <img src="/team_photos/Ellipse 8-1.png" alt="Rachda Helmy" className="sm:w-[198px] sm:h-[198px] w-32 h-32 rounded-full object-cover border-2 border-[#10A700]" />
+                        <p className="mt-4 text-lg font-semibold">RAGHDA HELMY</p>
+                        <p className="text-sm text-gray-400">BACKEND DEVELOPER</p>
+                    </div>
 
-    <div className="flex flex-col items-center">
-      <img src="/team_photos/Ellipse 8.png" alt="Dina Abaza" className="w-32 h-32 rounded-full object-cover border-2 border-[#10A700]" />
-      <p className="mt-4 text-lg font-semibold">DINA ABAZA</p>
-      <p className="text-sm text-gray-400">FRONTEND DEVELOPER</p>
-    </div>
+                    <div className="flex flex-col items-center">
+                        <img src="/team_photos/WhatsApp Image 2025-10-23 at 18.01.30_f7cf8215.jpg" alt="Dina Abaza" className="sm:w-[198px] sm:h-[198px] w-32 h-32 rounded-full object-cover border-2 border-[#10A700]" />
+                        <p className="mt-4 text-lg font-semibold">DINA ABAZA</p>
+                        <p className="text-sm text-gray-400">FRONTEND DEVELOPER</p>
+                    </div>
 
-    <div className="flex flex-col items-center">
-      <img src="/team_photos/Ellipse 8-4.png" alt="Youssef Tame" className="w-32 h-32 rounded-full object-cover border-2 border-[#10A700]" />
-      <p className="mt-4 text-lg font-semibold">YOUSSEF TAME</p>
-      <p className="text-sm text-gray-400">SOFTWARE DEVELOPER</p>
-    </div>
+                    <div className="flex flex-col items-center">
+                        <img src="/team_photos/Ellipse 8-4.png" alt="Youssef Tame" className="sm:w-[198px] sm:h-[198px] w-32 h-32 rounded-full object-cover border-2 border-[#10A700]" />
+                        <p className="mt-4 text-lg font-semibold">YOUSSEF TAME</p>
+                        <p className="text-sm text-gray-400">SOFTWARE DEVELOPER</p>
+                    </div>
 
-    {/* الصف الثاني */}
-    <div className="flex flex-col items-center col-span-1 md:col-span-3 md:justify-self-center md:flex-row gap-16 lg:col-span-2  lg:justify-self-auto">
-    {/* رمضان */}
-      <div className="flex flex-col items-center">
-        <img src="/team_photos/Ellipse 8-3.png" alt="Ramadan Mahdy" className="w-32 h-32 rounded-full object-cover border-2 border-[#10A700]" />
-        <p className="mt-4 text-lg font-semibold">RAMADAN MAHDY</p>
-        <p className="text-sm text-gray-400">BACKEND DEVELOPER</p>
-      </div>
+                    {/* الصف الثاني */}
+                    <div className="flex flex-col items-center col-span-1 md:col-span-3 md:justify-self-center md:flex-row gap-16 lg:col-span-2  lg:justify-self-auto">
+                        {/* رمضان */}
+                        <div className="flex flex-col items-center">
+                            <img src="/team_photos/Ellipse 8-3.png" alt="Ramadan Mahdy" className=" sm:w-[198px] sm:h-[198px] w-32 h-32 rounded-full object-cover border-2 border-[#10A700]" />
+                            <p className="mt-4 text-lg font-semibold">RAMADAN MAHDY</p>
+                            <p className="text-sm text-gray-400">BACKEND DEVELOPER</p>
+                        </div>
 
-      {/* أحمد */}
-      <div className="flex flex-col hidden sm:block items-center">
-        <img src="/team_photos/Ellipse 8-2.png" alt="Ahmed Saber" className="w-32 h-32 rounded-full object-cover border-2 border-[#10A700]" />
-        <p className="mt-4 text-lg font-semibold">AHMED SABER</p>
-        <p className="text-sm text-gray-400">UI/UX DESIGNER</p>
-      </div>
-    </div>
-       {/* أحمد */}
-       <div className="flex flex-col block sm:hidden col-span-2 items-center">
-        <img src="/team_photos/Ellipse 8-2.png" alt="Ahmed Saber" className="w-32 h-32 rounded-full object-cover border-2 border-[#10A700]" />
-        <p className="mt-4 text-lg font-semibold">AHMED SABER</p>
-        <p className="text-sm text-gray-400">UI/UX DESIGNER</p>
-      </div>
-  </div>
-</section>
-
+                        {/* أحمد */}
+                        <div className="flex flex-col hidden sm:block items-center">
+                            <img src="/team_photos/Ellipse 8-2.png" alt="Ahmed Saber" className="sm:w-[198px] sm:h-[198px] w-32 h-32 rounded-full object-cover border-2 border-[#10A700]" />
+                            <p className="mt-4 text-lg font-semibold">AHMED SABER</p>
+                            <p className="text-sm text-gray-400">UI/UX DESIGNER</p>
+                        </div>
+                    </div> 
+                    {/* أحمد */}
+                    <div className="flex flex-col block sm:hidden col-span-2 items-center justify-center">
+                        <img src="/team_photos/Ellipse 8-2.png" alt="Ahmed Saber" className="sm:w-[198px] sm:h-[198px] w-32 h-32 rounded-full object-cover border-2 border-[#10A700]" />
+                        <p className="mt-4 text-lg font-semibold">AHMED SABER</p>
+                        <p className="text-sm text-gray-400">UI/UX DESIGNER</p>
+                    </div>
+                </div>
+            </section>
+ 
 
             {/* Who We Are Section */}
             <section className="py-16 px-4 md:px-8 lg:px-16 bg-white text-black text-center">
@@ -144,9 +144,9 @@ const Com_AboutPage = () => {
                 <div className="max-w-4xl mx-auto">
                     <h3 className="text-2xl font-bold mb-8">READY TO START WITH OUR TEAM? LET'S BUILD YOUR NEXT PROJECT TOGETHER.</h3>
                     <div className="flex justify-center gap-4">
-                      <PrimaryButton href="/contact" />
+                        <PrimaryButton href="/contact" />
                         {/* <button className="bg-[#10A700] text-black font-bold py-3 px-6 rounded-lg hover:bg-green-600 transition">START YOUR PROJECT NOW</button> */}
-                
+
                     </div>
                 </div>
             </section>
