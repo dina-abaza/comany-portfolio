@@ -15,10 +15,10 @@ export default function Navbar() {
       name: "SERVICES",
       path: "/services",
       dropdown: [
-        { name: "Website Development", path: "/services/website-development" },
-        { name: "Mobile Application", path: "/services/mobile-application" },
-        { name: "UI/UX Design", path: "/services/ui-ux-design" },
-        { name: "Maintenance & Support", path: "/services/maintenance-support" },
+        { name: "Website Development", path: "/services?filter=website" },
+        { name: "Mobile Application", path: "/services?filter=mobile" },
+        { name: "UI/UX Design", path: "/services?filter=uiux" },
+        { name: "Maintenance & Support", path: "/services?filter=maintenance" },
       ],
     },
     { name: "OUR WORK", path: "/ourwork" },
@@ -80,6 +80,7 @@ export default function Navbar() {
                       <Link
                         key={idx}
                         href={item.path}
+                         onClick={() => setOpenDropdown(null)}
                         className="w-[240px] h-[40px] mx-auto mb-2 last:mb-0 rounded-full flex items-center justify-center text-white bg-white/5 hover:bg-white/10 transition-colors duration-300"
                       >
                         {item.name}
@@ -154,6 +155,7 @@ export default function Navbar() {
                       <Link
                         key={idx}
                         href={item.path}
+                        onClick={() => setOpenDropdown(null)}
                         className="w-[230px] h-[38px] mx-auto mb-2 last:mb-0 rounded-full flex items-center justify-center text-white bg-white/5 hover:bg-white/10 transition-colors duration-300"
                       >
                         {item.name}

@@ -20,7 +20,7 @@ export default function Footer() {
 
           <div>
             <h3 className="text-lg font-semibold mb-4">Our Social Media</h3>
-            <div className="flex items-center gap-4 flex-wrap">
+            <div className="flex items-center gap-4 ">
               {[FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaTiktok ].map((Icon, i) => (
                 <a
                   key={i}

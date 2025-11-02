@@ -1,13 +1,21 @@
 "use client";
 import { useRouter } from "next/navigation";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect} from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { useSearchParams } from "next/navigation";
 
-export default function FilterSection({ filters, items ,onCardClick}) {
-  const [activeFilter, setActiveFilter] = useState("all");
+export default function FilterSection({ filters, items ,onCardClick, initialFilter="all"}) {
+ const searchParams = useSearchParams();
+  const filterFromUrl = searchParams.get("filter") || initialFilter;
+
+  const [activeFilter, setActiveFilter] = useState(filterFromUrl);
   const scrollRef = useRef(null);
 const router = useRouter();
 
+  useEffect(() => {
+    setActiveFilter(filterFromUrl);
+  }, [filterFromUrl]);
+  
   const filteredItems =
     activeFilter === "all"
       ? items
@@ -25,16 +33,16 @@ const router = useRouter();
 
   return (
     <section className="w-full flex justify-center mb-14">
-      <div className="w-full max-w-[1440px] px-4">
+      <div className="w-full  px-4">
 
         {/* ✅ أزرار الفلاتر */}
         <div className="relative flex justify-center mt-6 lg:mt-8">
-          <div className="w-full lg:w-[1103px] flex justify-center h-auto">
+          <div className="w-full  flex justify-center h-auto">
 
             {/* زر السهم - شمال */}
             <button
               onClick={scrollLeft}
-              className="hidden sm:flex absolute left-0 top-1/2 -translate-y-1/2 bg-black/40 text-white p-2 rounded-full hover:bg-black transition-all duration-300 z-10"
+              className="flex lg:hidden absolute left-0 top-1/2 -translate-y-1/2 bg-black/40 text-white p-2 rounded-full hover:bg-black transition-all duration-300 z-10"
             >
               <FaChevronLeft size={16} />
             </button>
@@ -49,7 +57,10 @@ const router = useRouter();
                   {filters.map((f) => (
                     <button
                       key={f.value}
-                      onClick={() => setActiveFilter(f.value)}
+                   onClick={() => {
+                    setActiveFilter(f.value);
+                    router.push(`/services?filter=${f.value}`);}}
+                    
                       className={`whitespace-nowrap inline-flex items-center justify-center
                         px-[14px] sm:px-[16px] py-[8px] rounded-full text-[13px] sm:text-[14px] font-medium
                         transition-all duration-300
@@ -71,7 +82,7 @@ const router = useRouter();
             {/* زر السهم - يمين */}
             <button
               onClick={scrollRight}
-              className="hidden sm:flex absolute right-0 top-1/2 -translate-y-1/2 bg-black/40 text-white p-2 rounded-full hover:bg-black transition-all duration-300 z-10"
+              className="flex lg:hidden absolute right-0 top-1/2 -translate-y-1/2 bg-black/40 text-white p-2 rounded-full hover:bg-black transition-all duration-300 z-10"
             >
               <FaChevronRight size={16} />
             </button>
