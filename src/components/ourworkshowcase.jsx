@@ -142,7 +142,7 @@ export default function OurWorkShowcase() {
 
             {/* Button */}
             <div className="flex justify-center lg:justify-end mt-6 lg:mt-0">
-              <PrimaryButton href={"/contact"} />
+              <PrimaryButton href={"/contact"} text={"start your project now"}/>
             </div>
           </div>
         </div>
@@ -229,8 +229,8 @@ export default function OurWorkShowcase() {
 
       {/* Action Buttons */}
       <div className="my-[40px] md:my-[72px] flex flex-col sm:flex-row md:flex-row justify-center items-center gap-4">
-        <PrimaryButton href={"/contact"} />
-        <SecondaryButton href={"/ourwork"} />
+        <PrimaryButton href={"/contact"} text={"start your project now"}/>
+        <SecondaryButton href={"/ourwork"} text={"see all projects"}/>
       </div>
     </>
   );
