@@ -1,10 +1,10 @@
 export default function ServicesBetter() {
   return (
     <section className="w-full flex justify-center bg-transparent py-[20px] px-[10px]">
-      <div className="w-full max-w-[1440px] flex flex-col items-center">
+      <div className="w-full flex flex-col items-center">
 
         {/* الصندوق الأبيض اللي فيه السؤال */}
-        <div className="w-full max-w-[1440px] h-[50px] md:h-[80px] bg-white flex items-center justify-center">
+        <div className="w-full h-[50px] md:h-[80px] bg-white flex items-center justify-center">
           <h4 className="text[18px] md:text-[24px] font-semibold text-black text-center">
             WHY IS OUR SERVICES BETTER?
           </h4>

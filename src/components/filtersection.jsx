@@ -94,7 +94,7 @@ const router = useRouter();
 
         {/* ✅ الجريد للكروت */}
         <div className="flex justify-center">
-          <div className="w-full lg:w-[1234px]">
+          <div className="w-full">
             <div
               className="
                 grid 
