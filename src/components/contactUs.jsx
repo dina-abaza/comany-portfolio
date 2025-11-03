@@ -9,8 +9,8 @@ import { Inter } from "next/font/google";
 const inter = Inter({
     subsets: ["latin"],
     display: "swap",
-  });
-  
+});
+
 
 export default function Com_ContactUs() {
     const [formData, setFormData] = useState({
@@ -19,6 +19,8 @@ export default function Com_ContactUs() {
         phone: '',
         ideaDescription: ''
     });
+    const [loading, setLoading] = useState(false);
+    const [status, setStatus] = useState(null);
 
 
 
@@ -32,33 +34,34 @@ export default function Com_ContactUs() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log('Form Data Submitted:', formData);
+        setLoading(true);
+        setStatus(null);
 
         try {
             const response = await fetch('/api/contact', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData),
             });
 
             if (response.ok) {
                 toast.success('Message sent successfully!');
-                setFormData({
-                    fullName: '',
-                    email: '',
-                    phone: '',
-                    ideaDescription: ''
-                });
+                setStatus('success');
+                setFormData({ fullName: '', email: '', phone: '', ideaDescription: '' });
             } else {
                 toast.error('Failed to send message.');
+                setStatus('error');
             }
         } catch (error) {
             console.error('Error submitting form:', error);
             toast.error('An error occurred while sending the message.');
+            setStatus('error');
+        } finally {
+            setTimeout(() => setStatus(null), 2000);
+            setLoading(false);
         }
     };
+
 
     return (
 
@@ -82,7 +85,7 @@ export default function Com_ContactUs() {
                         </h5>
 
                         <p className={`text-[14px] font-normal ${inter.className}`}>
-                        Tell us about your project and let's create something extraordinary together.
+                            Tell us about your project and let's create something extraordinary together.
                         </p>
 
                         <input
@@ -124,10 +127,30 @@ export default function Com_ContactUs() {
                         />
                         <button
                             type="submit"
-                            className="bg-black text-white font-medium px-6 py-3 rounded-[16px] hover:bg-blue-600 w-full transition"
+                            disabled={loading}
+                            className={`relative bg-black text-white font-medium px-6 py-3 rounded-[16px] w-full transition-all duration-300
+        ${loading ? 'opacity-70 cursor-not-allowed' : 'hover:bg-blue-600'}
+    `}
                         >
-                            SEND
+                            {loading ? (
+                                <div className="flex items-center justify-center">
+                                    <span className="w-5 h-5 border-4 border-white border-t-transparent rounded-full animate-spin"></span>
+                                </div>
+                            ) : status === 'success' ? (
+                                <div className="flex items-center justify-center gap-2">
+                                    <span className="text-green-500 text-lg">✔</span>
+                                    <span>Sent!</span>
+                                </div>
+                            ) : status === 'error' ? (
+                                <div className="flex items-center justify-center gap-2">
+                                    <span className="text-red-500 text-lg">✖</span>
+                                    <span>Failed</span>
+                                </div>
+                            ) : (
+                                'SEND'
+                            )}
                         </button>
+
                     </form>
 
                     {/* معلومات التواصل */}
