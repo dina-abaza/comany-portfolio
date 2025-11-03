@@ -4,10 +4,12 @@ import Header from "@/components/Header";
 import ServicesBetter from "@/components/servicesbetter";
 import PrimaryButton from "@/components/buttons/PrimaryButton";
 import SecondaryButton from "@/components/buttons/SecondaryButton";
-import { useRouter } from "next/navigation";
+import { useRouter,useSearchParams } from "next/navigation";
 
 export default function ServicesPage() {
     const router = useRouter();
+  const searchParams = useSearchParams();
+  const filterParam = searchParams.get("filter") || "all";
 
   const filters = [
     { value: "all", label: "ALL SERVICES" },
@@ -48,14 +50,14 @@ export default function ServicesPage() {
           "from ui/ux to web and mobile development we provide you with comprehensive solutions that ensure a destenctive user experience and strong code to help your project grow steadily."
         }
       />
-      <FilterSection filters={filters} items={items}
+      <FilterSection filters={filters} items={items} initialFilter={filterParam}
         onCardClick={(item) => router.push(`/services/${item.id}`)}
       />
       <ServicesBetter/>
 
   <div className="mb-12 ml-0 flex flex-col items-center gap-4 md:flex-row md:justify-start md:items-center md:ml-10">
-  <PrimaryButton href={"/contact"} />
-  <SecondaryButton href={"/ourwork"} />
+  <PrimaryButton href={"/contact"} text= "START YOUR PROJECT NOW" />
+  <SecondaryButton href={"/ourwork"} text= "CONTUCT US"/>
 </div>
 
     </main>
