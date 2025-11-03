@@ -24,8 +24,8 @@ const Com_AboutPage = () => {
                     </div>
 
                     <div className="flex flex-col items-center">
-                        <div className="flex justify-center items-center rounded-full border-2 border-[#10A700] w-32 h-32 sm:w-[198px] sm:h-[198px] overflow-hidden">
-                            <img src="/team_photos/WhatsApp Image 2025-10-23 at 18.01.30_f7cf8215.jpg" alt="Dina Abaza" className="object-cover w-full h-full" />
+                        <div className="flex justify-center items-center rounded-full border-2 bg-[#ffffff] border-[#10A700] w-32 h-32 sm:w-[198px] sm:h-[198px] overflow-hidden">
+                            <img src="/team_photos/WhatsApp Image 2025-10-23 at 18.01.30_f7cf8215.jpg" alt="Dina Abaza" className="object-contain sm:w-full sm:h-full sm:mt-[10px] w-[100px]" />
                         </div>
                         <p className="mt-4 text-lg font-semibold text-center">DINA ABAZA</p>
                         <p className="text-sm text-gray-400 text-center">FRONTEND DEVELOPER</p>
@@ -53,8 +53,8 @@ const Com_AboutPage = () => {
 
                         {/* أحمد */}
                         <div className="flex flex-col hidden sm:block items-center">
-                            <div className="flex justify-center items-center rounded-full border-2 border-[#10A700] w-32 h-32 sm:w-[198px] sm:h-[198px] overflow-hidden">
-                                <img src="/team_photos/Ellipse 8-2.png" alt="Ahmed Saber" className="object-cover w-full h-full" />
+                            <div className="flex justify-center items-center rounded-full border-2 bg-[#fff] border-[#10A700] w-32 h-32 sm:w-[198px] sm:h-[198px] overflow-hidden">
+                                <img src="/team_photos/Ellipse 8-2.png" alt="Ahmed Saber" className="object-contain mt-10 object-[0%_100%] w-[160px] " />
                             </div>
                             <p className="mt-4 text-lg font-semibold">AHMED SABER</p>
                             <p className="text-sm text-gray-400">UI/UX DESIGNER</p>
@@ -62,8 +62,8 @@ const Com_AboutPage = () => {
                     </div>
                     {/* أحمد */}
                     <div className="flex flex-col block sm:hidden col-span-2 items-center justify-center">
-                        <div className="flex justify-center items-center rounded-full border-2 border-[#10A700] w-32 h-32 sm:w-[198px] sm:h-[198px] overflow-hidden">
-                            <img src="/team_photos/Ellipse 8-2.png" alt="Ahmed Saber" className="object-cover w-full h-full" />
+                        <div className="flex justify-center items-center rounded-full border-2 border-[#10A700] bg-[#fff] w-32 h-32 sm:w-[198px] sm:h-[198px] overflow-hidden">
+                        <img src="/team_photos/Ellipse 8-2.png" alt="Ahmed Saber" className="object-contain mt-10 object-[0%_100%] w-[95px]" />
                         </div>
 
                         <p className="mt-4 text-lg sm:ml-20 font-semibold">AHMED SABER</p>
