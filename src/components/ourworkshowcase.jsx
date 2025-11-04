@@ -150,7 +150,7 @@ export default function OurWorkShowcase() {
 
       {/* Problem & Solution Section */}
       <section className="w-full flex justify-center bg-[#0C0C0C] py-[80px] px-[20px]">
-        <div className="w-full max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-stretch gap-[30px] md:gap-[44px]">
+        <div className="w-full  mx-auto flex flex-col md:flex-row justify-between items-stretch gap-[30px] md:gap-[44px]">
 
           {/* Problem Statement */}
           <div className="flex-1 bg-white rounded-[16px] flex flex-col p-[32px] min-h-[420px]">
@@ -220,7 +220,7 @@ export default function OurWorkShowcase() {
 
         <div className="flex items-center justify-center flex-wrap gap-[12px] sm:gap-[20px] md:gap-[40px] lg:gap-[44px]">
           {project.technologies.map((tech, index) => (
-            <span key={index} className="text-[14px] sm:text-[18px] md:text-[20px] font-extralight text-gray-800">
+            <span key={index} className=" text-[14px] sm:text-[18px] md:text-[20px] font-extralight text-gray-800">
               {tech}
             </span>
           ))}

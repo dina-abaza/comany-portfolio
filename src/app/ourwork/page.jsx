@@ -1,13 +1,13 @@
 "use client";
 import { useRouter } from "next/navigation";
 import PrimaryButton from "@/components/buttons/PrimaryButton";
-import SecondaryButton from "@/components/buttons/SecondaryButton";
 import FilterSection from "@/components/filtersection";
 import Header from "@/components/Header";
+import { useState } from "react";
 
 export default function ProjectsPage() {
     const router = useRouter();
-    
+    const [activeFilter, setActiveFilter] = useState("all");
   const filters = [
     { value: "all", label: "all projects" },
     { value: "application", label: "mobile applications" },
@@ -46,8 +46,11 @@ export default function ProjectsPage() {
           "from designe to programming integrated digital solutions that made a real difference whit our clients."
         }
       />
-      <FilterSection title="our work" filters={filters} items={items}
-      onCardClick={(item) => router.push(`/ourwork/${item.id}`)} />
+      <FilterSection  filters={filters} items={items}
+       activeFilter={activeFilter}
+       setActiveFilter={setActiveFilter}
+       onCardClick={(item) => router.push(`/ourwork/${item.id}`)}
+     />
 
       <div className="flex justify-center items-center mb-12">
      <PrimaryButton href={"/contact"} text= "START YOUR PROJECT NOW" />
