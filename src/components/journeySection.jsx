@@ -48,7 +48,7 @@ export default function JourneySection() {
       <div
         className="absolute inset-0 bg-transparent -z-10"
         style={{
-          backgroundImage: "url('/imgHome5.png')",
+          backgroundImage: "url('/imghome5.png')",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundPosition: "center",
