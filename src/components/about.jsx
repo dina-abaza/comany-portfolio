@@ -56,8 +56,8 @@ const Com_AboutPage = () => {
                             <div className="flex justify-center items-center rounded-full border-2 bg-[#fff] border-[#10A700] w-32 h-32 sm:w-[198px] sm:h-[198px] overflow-hidden">
                                 <img src="/team_photos/Ellipse 8-2.png" alt="Ahmed Saber" className="object-contain mt-10 object-[0%_100%] w-[160px] " />
                             </div>
-                            <p className="mt-4 text-lg font-semibold">AHMED SABER</p>
-                            <p className="text-sm text-gray-400">UI/UX DESIGNER</p>
+                            <p className="mt-4 text-lg text-center font-semibold">AHMED SABER</p>
+                            <p className="text-sm text-center text-gray-400">UI/UX DESIGNER</p>
                         </div>
                     </div>
                     {/* أحمد */}
