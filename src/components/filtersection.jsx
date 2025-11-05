@@ -1,27 +1,15 @@
 "use client";
-import { useRouter } from "next/navigation";
-import { useState, useRef, useEffect} from "react";
+import { useRef } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import { useSearchParams } from "next/navigation";
 
-export default function FilterSection({ filters, items ,onCardClick, initialFilter="all"}) {
- const searchParams = useSearchParams();
-  const filterFromUrl = searchParams.get("filter") || initialFilter;
-
-  const [activeFilter, setActiveFilter] = useState(filterFromUrl);
+export default function FilterSection({ filters, items, activeFilter,setActiveFilter, onCardClick }) {
   const scrollRef = useRef(null);
-const router = useRouter();
 
-  useEffect(() => {
-    setActiveFilter(filterFromUrl);
-  }, [filterFromUrl]);
-  
   const filteredItems =
     activeFilter === "all"
       ? items
       : items.filter((i) => i.category === activeFilter);
 
-  // التحكم في السحب بالأسهم
   const scrollLeft = () => {
     if (scrollRef.current)
       scrollRef.current.scrollBy({ left: -150, behavior: "smooth" });
@@ -33,13 +21,9 @@ const router = useRouter();
 
   return (
     <section className="w-full flex justify-center mb-14">
-      <div className="w-full  px-4">
-
-        {/* ✅ أزرار الفلاتر */}
+      <div className="w-full px-4">
         <div className="relative flex justify-center mt-6 lg:mt-8">
-          <div className="w-full  flex justify-center h-auto">
-
-            {/* زر السهم - شمال */}
+          <div className="w-full flex justify-center h-auto">
             <button
               onClick={scrollLeft}
               className="flex lg:hidden absolute left-0 top-1/2 -translate-y-1/2 bg-black/40 text-white p-2 rounded-full hover:bg-black transition-all duration-300 z-10"
@@ -47,20 +31,13 @@ const router = useRouter();
               <FaChevronLeft size={16} />
             </button>
 
-            {/* الأزرار نفسها */}
-            <div
-              ref={scrollRef}
-              className="w-full overflow-x-auto no-scrollbar scroll-smooth"
-            >
+            <div ref={scrollRef} className="w-full overflow-x-auto no-scrollbar scroll-smooth">
               <div className="flex justify-center min-w-max px-2">
                 <div className="inline-flex items-center gap-[16px] sm:gap-[24px] lg:gap-[32px]">
                   {filters.map((f) => (
                     <button
                       key={f.value}
-                   onClick={() => {
-                    setActiveFilter(f.value);
-                    router.push(`/services?filter=${f.value}`);}}
-                    
+                      onClick={() => setActiveFilter(f.value)} // استخدم الفانكشن من الأب
                       className={`whitespace-nowrap inline-flex items-center justify-center
                         px-[14px] sm:px-[16px] py-[8px] rounded-full text-[13px] sm:text-[14px] font-medium
                         transition-all duration-300
@@ -68,8 +45,7 @@ const router = useRouter();
                           activeFilter === f.value
                             ? "bg-gradient-to-r from-[#10A700] to-[#B8FF00] text-black shadow-[0_6px_18px_rgba(16,167,0,0.18)] scale-[1.05]"
                             : "bg-black/40 text-white/80 border border-white/10 hover:bg-black/60 hover:scale-[1.02]"
-                        }
-                      `}
+                        }`}
                       style={{ height: 40, minWidth: 44 }}
                     >
                       {f.label}
@@ -79,7 +55,6 @@ const router = useRouter();
               </div>
             </div>
 
-            {/* زر السهم - يمين */}
             <button
               onClick={scrollRight}
               className="flex lg:hidden absolute right-0 top-1/2 -translate-y-1/2 bg-black/40 text-white p-2 rounded-full hover:bg-black transition-all duration-300 z-10"
@@ -89,29 +64,16 @@ const router = useRouter();
           </div>
         </div>
 
-        {/* مسافة بين الأزرار والكروت */}
         <div className="mt-[60px] lg:mt-[95px]" />
 
-        {/* ✅ الجريد للكروت */}
         <div className="flex justify-center">
           <div className="w-full lg:w-[1234px]">
-            <div
-              className="
-                grid 
-                grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 
-                gap-[20px] p-[20px] 
-                lg:gap-x-[44px] lg:gap-y-[44px] lg:p-0
-                justify-center
-              "
-            >
+            <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-[20px] p-[20px] lg:gap-x-[44px] lg:gap-y-[44px] lg:p-0 justify-center">
               {filteredItems.map((item) => (
                 <article
                   key={item.id}
                   onClick={() => onCardClick(item)}
-                  className="
-                  cursor-pointer  group relative overflow-hidden rounded-[12px] shadow-lg transform transition-transform duration-500 hover:scale-[1.04]
-                    bg-cover bg-center 
-                  "
+                  className="cursor-pointer group relative overflow-hidden rounded-[12px] shadow-lg transform transition-transform duration-500 hover:scale-[1.04] bg-cover bg-center"
                   style={{
                     backgroundImage: `url(${item.image})`,
                     width: "100%",
@@ -120,14 +82,8 @@ const router = useRouter();
                     backgroundPosition: "center",
                   }}
                 >
-                  {/* الغلاف الزجاجي */}
                   <div
-                    className="
-                      absolute bottom-0 left-0 w-full
-                      flex flex-col justify-center px-[12px] sm:px-[16px] md:px-[20px]
-                      transition-all duration-500 group-hover:bg-white/10
-                      rounded-b-[12px]
-                    "
+                    className="absolute bottom-0 left-0 w-full flex flex-col justify-center px-[12px] sm:px-[16px] md:px-[20px] transition-all duration-500 group-hover:bg-white/10 rounded-b-[12px]"
                     style={{
                       height: "90px",
                       background: "rgba(255,255,255,0.06)",
@@ -147,7 +103,6 @@ const router = useRouter();
             </div>
           </div>
         </div>
-
       </div>
     </section>
   );

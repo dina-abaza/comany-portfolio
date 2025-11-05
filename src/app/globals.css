@@ -5,6 +5,10 @@
   --foreground: #ededed;
   
 }
+/* globals.css */
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background: var(--background);

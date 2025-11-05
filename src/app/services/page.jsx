@@ -4,12 +4,23 @@ import Header from "@/components/Header";
 import ServicesBetter from "@/components/servicesbetter";
 import PrimaryButton from "@/components/buttons/PrimaryButton";
 import SecondaryButton from "@/components/buttons/SecondaryButton";
-import { useRouter,useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams} from "next/navigation";
+import { useState, useEffect } from "react";
 
 export default function ServicesPage() {
     const router = useRouter();
-  const searchParams = useSearchParams();
-  const filterParam = searchParams.get("filter") || "all";
+   const searchParams = useSearchParams();
+  
+  // القراءة من الـ URL أول مرة
+  const initialFilter = searchParams.get("filter") || "all";
+
+  // هنا الـ Parent state
+  const [activeFilter, setActiveFilter] = useState(initialFilter);
+
+  // أي تغيير في URL يحدّث state الأب
+  useEffect(() => {
+    setActiveFilter(initialFilter);
+  }, [searchParams]);
 
   const filters = [
     { value: "all", label: "ALL SERVICES" },
@@ -31,7 +42,7 @@ export default function ServicesPage() {
     { id: 9, category: "website", title: "LANDING PAGES", description: "High-conversion landing pages for marketing campaigns." ,image:"/service9.png"},
     { id: 10, category: "uiux", title: "PORTFOLIO DESIGN", description: "Elegant and clean portfolios for professionals." ,image:"/service10.png"},
     { id: 11, category: "maintenance", title: "SECURITY MONITORING", description: "Keep your app safe with constant protection and checks.",image:"/service11.png" },
-    { id: 12, category: "website", title: "BLOG SYSTEM", description: "Create and manage blog content easily." ,image:"/service1.png",image:"/service2.png"},
+    { id: 12, category: "website", title: "BLOG SYSTEM", description: "Create and manage blog content easily." ,image:"/service2.png"},
     { id: 13, category: "mobile", title: "SOCIAL MEDIA APP", description: "Custom platforms for community and content sharing." ,image:"/service13.png"},
     { id: 14, category: "uiux", title: "BRANDING & STYLE GUIDE", description: "Consistent visual identity across your products.",image:"/service14.png" },
     { id: 15, category: "maintenance", title: "PERFORMANCE OPTIMIZATION", description: "Make your website and app run faster and smoother.",image:"/service15.png" },
@@ -50,9 +61,12 @@ export default function ServicesPage() {
           "from ui/ux to web and mobile development we provide you with comprehensive solutions that ensure a destenctive user experience and strong code to help your project grow steadily."
         }
       />
-      <FilterSection filters={filters} items={items} initialFilter={filterParam}
-        onCardClick={(item) => router.push(`/services/${item.id}`)}
-      />
+      <FilterSection filters={filters} items={items}
+     activeFilter={activeFilter} 
+    setActiveFilter={setActiveFilter}
+    onCardClick={(item) => router.push(`/services/${item.id}`)}
+    />
+    
       <ServicesBetter/>
 
   <div className="mb-12 ml-0 flex flex-col items-center gap-4 md:flex-row md:justify-start md:items-center md:ml-10">
