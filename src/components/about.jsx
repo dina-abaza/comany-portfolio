@@ -16,25 +16,41 @@ const Com_AboutPage = () => {
                 <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 lg:gap-9 gap-y-9 gap-x-[-30px]">
                     {/* الصف الأول */}
                     <div className="flex flex-col items-center">
-                        <div className="flex justify-center items-center rounded-full border-2 border-[#10A700] w-32 h-32 sm:w-[198px] sm:h-[198px] overflow-hidden">
-                            <img src="/team_photos/Ellipse 8-1.png" alt="Raghda Helmy" className="object-cover w-full h-full" />
+
+                        <div className="w-32 h-32 sm:w-[198px] sm:h-[198px] rounded-full p-[4px] bg-gradient-to-r from-[#10A700] to-[#B8FF00]">
+                            <div className="w-full h-full rounded-full overflow-hidden border-[#10A700] bg-black">
+                                <img src="/team_photos/Ellipse 8-1.png" className="object-cover w-full h-full" />
+                            </div>
                         </div>
+
+
                         <p className="mt-4 text-lg font-semibold text-center">RAGHDA HELMY</p>
                         <p className="text-sm text-gray-400 text-center">BACKEND DEVELOPER</p>
                     </div>
 
                     <div className="flex flex-col items-center">
-                        <div className="flex justify-center items-center rounded-full border-2 bg-[#ffffff] border-[#10A700] w-32 h-32 sm:w-[198px] sm:h-[198px] overflow-hidden">
-                            <img src="/team_photos/WhatsApp Image 2025-10-23 at 18.01.30_f7cf8215.jpg" alt="Dina Abaza" className="object-contain sm:w-full sm:h-full sm:mt-[10px] w-[100px]" />
+                        <div className="p-[3px] rounded-full bg-gradient-to-r from-[#10A700] to-[#B8FF00]">
+                            <div className="flex justify-center items-center rounded-full bg-white border-[#10A700] w-32 h-32 sm:w-[198px] sm:h-[198px] overflow-hidden">
+                                <img
+                                    src="/team_photos/WhatsApp Image 2025-10-23 at 18.01.30_f7cf8215.jpg"
+                                    alt="Dina Abaza"
+                                    className="object-contain sm:w-full sm:h-full sm:mt-[10px] w-[100px]"
+                                />
+                            </div>
                         </div>
+
                         <p className="mt-4 text-lg font-semibold text-center">DINA ABAZA</p>
                         <p className="text-sm text-gray-400 text-center">FRONTEND DEVELOPER</p>
                     </div>
 
 
+
                     <div className="flex flex-col items-center">
-                        <div className="flex justify-center items-center rounded-full border-2 border-[#10A700] w-32 h-32 sm:w-[198px] sm:h-[198px] overflow-hidden">
-                            <img src="/team_photos/Ellipse 8-4.png" alt="Youssef Tame" className="object-cover w-full h-full" />
+
+                        <div className="p-[3px] rounded-full bg-gradient-to-r from-[#10A700] to-[#B8FF00]">
+                            <div className="flex justify-center items-center rounded-full border-2 w-32 h-32 border-[#10A700] sm:w-[198px] sm:h-[198px] overflow-hidden">
+                                <img src="/team_photos/Ellipse 8-4.png" alt="Youssef Tame" className="object-cover w-full h-full" />
+                            </div>
                         </div>
                         <p className="mt-4 text-lg font-semibold text-center">YOSSEF TAME</p>
                         <p className="text-sm text-gray-400 text-center">Flutter DEVELOPER</p>
@@ -44,8 +60,10 @@ const Com_AboutPage = () => {
                     <div className="flex sm:mt-12  mt-0 md:mt-0 flex-col items-center col-span-1 md:col-span-3 md:justify-self-center md:flex-row gap-22 lg:gap-9 lg:col-span-2  lg:justify-self-auto">
                         {/* رمضان */}
                         <div className="flex flex-col items-center">
-                            <div className="flex justify-center items-center rounded-full border-2 border-[#10A700] w-32 h-32 sm:w-[198px] sm:h-[198px] overflow-hidden">
-                                <img src="/team_photos/Ellipse 8-3.png" alt="Ramadan Mahdy" className="object-cover w-full h-full" />
+                            <div className="p-[2px] rounded-full bg-gradient-to-r from-[#10A700] to-[#B8FF00]">
+                                <div className="flex justify-center items-center rounded-full border-2 border-[#10A700] w-32 h-32 sm:w-[198px] sm:h-[198px] overflow-hidden">
+                                    <img src="/team_photos/Ellipse 8-3.png" alt="Ramadan Mahdy" className="object-cover w-full h-full" />
+                                </div>
                             </div>
                             <p className="mt-4 text-lg font-semibold text-center">RAMADAN MAHDY</p>
                             <p className="text-sm text-gray-400 text-center">Full Stack Developer</p>
@@ -53,8 +71,10 @@ const Com_AboutPage = () => {
 
                         {/* أحمد */}
                         <div className="flex flex-col hidden sm:block items-center">
-                            <div className="flex justify-center items-center rounded-full border-2 bg-[#fff] border-[#10A700] w-32 h-32 sm:w-[198px] sm:h-[198px] overflow-hidden">
-                                <img src="/team_photos/Ellipse 8-2.png" alt="Ahmed Saber" className="object-contain mt-10 object-[0%_100%] w-[160px] " />
+                            <div className="p-[2px] rounded-full bg-gradient-to-r from-[#10A700] to-[#B8FF00]">
+                                <div className="flex justify-center items-center rounded-full border-2 bg-[#fff] border-[#10A700] w-32 h-32 sm:w-[198px] sm:h-[198px] overflow-hidden">
+                                    <img src="/team_photos/Ellipse 8-2.png" alt="Ahmed Saber" className="object-contain mt-10 object-[0%_100%] w-[160px] " />
+                                </div>
                             </div>
                             <p className="mt-4 text-lg text-center font-semibold">AHMED SABER</p>
                             <p className="text-sm text-center text-gray-400">UI/UX DESIGNER</p>
@@ -62,10 +82,11 @@ const Com_AboutPage = () => {
                     </div>
                     {/* أحمد */}
                     <div className="flex flex-col block sm:hidden col-span-2 items-center justify-center">
-                        <div className="flex justify-center items-center rounded-full border-2 border-[#10A700] bg-[#fff] w-32 h-32 sm:w-[198px] sm:h-[198px] overflow-hidden">
-                        <img src="/team_photos/Ellipse 8-2.png" alt="Ahmed Saber" className="object-contain mt-10 object-[0%_100%] w-[95px]" />
+                        <div className="p-[2px] rounded-full bg-gradient-to-r from-[#10A700] to-[#B8FF00]">
+                            <div className="flex justify-center items-center rounded-full border-2 border-[#10A700] bg-[#fff] w-32 h-32 sm:w-[198px] sm:h-[198px] overflow-hidden">
+                                <img src="/team_photos/Ellipse 8-2.png" alt="Ahmed Saber" className="object-contain mt-10 object-[0%_100%] w-[95px]" />
+                            </div>
                         </div>
-
                         <p className="mt-4 text-lg sm:ml-20 font-semibold">AHMED SABER</p>
                         <p className="text-sm text-gray-400">UI/UX DESIGNER</p>
                     </div>
@@ -159,7 +180,7 @@ const Com_AboutPage = () => {
                 <div className="max-w-4xl mx-auto">
                     <h3 className="text-2xl font-bold mb-8">READY TO START WITH OUR TEAM? LET'S BUILD YOUR NEXT PROJECT TOGETHER.</h3>
                     <div className="flex justify-center gap-4">
-                        <PrimaryButton href={"/contact"} text= "START YOUR PROJECT NOW" />
+                        <PrimaryButton href={"/contact"} text="START YOUR PROJECT NOW" />
                         {/* <SecondaryButton href={"/ourwork"} text= "CONTUCT US"/> */}
                         {/* <button className="bg-[#10A700] text-black font-bold py-3 px-6 rounded-lg hover:bg-green-600 transition">START YOUR PROJECT NOW</button> */}
 
