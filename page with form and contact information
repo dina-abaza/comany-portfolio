@@ -1,0 +1,62 @@
+* [33m0ccbebb[m[33m ([m[1;31mramadan/main[m[33m)[m feat(filter): implement state management for filter synchronization
+* [33mf4cf2f8[m style(about): improve team member card styling with gradient borders
+* [33mfc8420b[m style(about): center align team member name and title
+* [33mb709a67[m fix(components): correct image path casing and restructure services section
+* [33mcea9ba9[m feat: add suspense wrappers and new service filter component
+* [33md30f12d[m docs: update README with comprehensive project details
+* [33m6531cee[m style(components): remove fixed width constraints for better responsiveness
+* [33m1338599[m style(about): adjust image styling and layout in about page
+[31m|[m * [33mcc1da65[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31mramadan/master[m[33m, [m[1;31mramadan/HEAD[m[33m)[m Merge branch 'dina-abaza:master' into master
+[31m|[m[31m/[m[33m|[m 
+[31m|[m * [33mad06095[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m clean code for services&ourwork
+* [33m|[m [33m2e39293[m refactor(components): improve contact form UX and clean up unused imports
+* [33m|[m [33m227c127[m feat(services): add service details page with components and styling
+[34m|[m[33m\[m[33m|[m 
+[34m|[m * [33mbc16b42[m edit buttons
+[34m|[m *   [33m23626e5[m Resolved merge conflict in ourworkshowcase.jsx
+[34m|[m [36m|[m[1;31m\[m  
+[34m|[m [36m|[m *   [33m46c5839[m Merge pull request #3 from YussefTaie/master
+[34m|[m [36m|[m [1;32m|[m[1;33m\[m  
+[34m|[m [36m|[m [1;32m|[m * [33m3b0c099[m 2th
+[34m|[m [36m|[m [1;32m|[m *   [33m4f374d6[m Merge branch 'master' of https://github.com/YussefTaie/comany-portfolio
+[34m|[m [36m|[m [1;32m|[m [1;34m|[m[1;32m\[m  
+[34m|[m [36m|[m [1;32m|[m [1;34m|[m[1;32m/[m  
+[34m|[m [36m|[m [1;32m|[m[1;32m/[m[1;34m|[m   
+[34m|[m [36m|[m [1;32m|[m * [33ma88988e[m Add Service Details page and related components
+[34m|[m * [1;32m|[m [1;35m|[m [33m026da25[m My local updates before pulling
+[34m|[m [1;32m|[m[1;32m/[m [1;35m/[m  
+* [1;32m/[m [1;35m/[m [33m8a0bb11[m[33m ([m[1;31mramadan/test[m[33m)[m refactor(about): improve team section layout and responsiveness
+[1;32m|[m[1;32m/[m [1;35m/[m  
+* [1;35m|[m [33m1b09128[m responsive details project
+* [1;35m|[m [33mf3a81b3[m project details
+* [1;35m|[m   [33m9081a8f[m Merge pull request #2 from RAMADAN-MAHDY/master
+[1;36m|[m[31m\[m [1;35m\[m  
+[1;36m|[m * [1;35m|[m [33m89f943e[m refactor(ui): improve responsive layout and update team photos
+[1;36m|[m * [1;35m|[m   [33mc4cf5b0[m Merge branch 'master' of https://github.com/RAMADAN-MAHDY/comany-portfolio
+[1;36m|[m [32m|[m[1;36m\[m [1;35m\[m  
+[1;36m|[m [32m|[m[1;36m/[m [1;35m/[m  
+[1;36m|[m[1;36m/[m[32m|[m [1;35m|[m   
+* [32m|[m [1;35m|[m [33m8dc493e[m services
+[1;35m|[m [32m|[m[1;35m/[m  
+[1;35m|[m[1;35m/[m[32m|[m   
+* [32m|[m [33m193bcd2[m responsive home
+* [32m|[m [33m10379f9[m edit
+* [32m|[m [33m32328f3[m edit header
+* [32m|[m [33m8bd8fd8[m fix merge conflict in package.json
+* [32m|[m   [33m91a26b9[m Resolve merge conflicts
+[34m|[m[35m\[m [32m\[m  
+* [35m|[m [32m|[m [33m118ec42[m edit text
+* [35m|[m [32m|[m [33m2078f36[m finish home
+[35m|[m [35m|[m * [33m3962061[m style(contactUs): fix space in placeholder text color value
+[35m|[m [35m|[m[35m/[m  
+[35m|[m * [33mc5a96a1[m feat(contact): implement contact form with MongoDB integration
+[35m|[m *   [33m90e8f44[m Merge branch 'master' of https://github.com/RAMADAN-MAHDY/comany-portfolio
+[35m|[m [36m|[m[35m\[m  
+[35m|[m [36m|[m[35m/[m  
+[35m|[m[35m/[m[36m|[m   
+* [36m|[m [33m47f0861[m update home
+[1;31m|[m * [33m53e608a[m feat(contact): add contact us page with form and contact information
+[1;31m|[m[1;31m/[m  
+* [33m5f5c08e[m edit in footer
+* [33mef21b42[m Initial commit
+* [33m377f88a[m Initial commit from Create Next App
