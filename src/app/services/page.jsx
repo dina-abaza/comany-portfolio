@@ -5,15 +5,23 @@ import Header from "@/components/Header";
 import ServicesBetter from "@/components/servicesbetter";
 import PrimaryButton from "@/components/buttons/PrimaryButton";
 import SecondaryButton from "@/components/buttons/SecondaryButton";
-import { useRouter } from "next/navigation";
-import ServiceFilterSection from "@/components/ServiceFilterSection";
-import { Suspense , useState } from 'react'
+import { useRouter, useSearchParams} from "next/navigation";
+import { useState, useEffect } from "react";
 
 export default function ServicesPage() {
+    const router = useRouter();
+   const searchParams = useSearchParams();
   
-  const [activeFilter, setActiveFilter] = useState("all");
+  // القراءة من الـ URL أول مرة
+  const initialFilter = searchParams.get("filter") || "all";
 
-  const router = useRouter();
+  // هنا الـ Parent state
+  const [activeFilter, setActiveFilter] = useState(initialFilter);
+
+  // أي تغيير في URL يحدّث state الأب
+  useEffect(() => {
+    setActiveFilter(initialFilter);
+  }, [searchParams]);
 
   const filters = [
     { value: "all", label: "ALL SERVICES" },
@@ -54,17 +62,12 @@ export default function ServicesPage() {
           "from ui/ux to web and mobile development we provide you with comprehensive solutions that ensure a destenctive user experience and strong code to help your project grow steadily."
         }
       />
-      <Suspense fallback={<p>Loading...</p>}>
-        <ServiceFilterSection
-          filters={filters}
-          items={items}
-          activeFilter={activeFilter}
-          setActiveFilter={(filter) => setActiveFilter(filter)}
-          onCardClick={(item) => router.push(`/services/${item.id}`)}
-        />
-      </Suspense>
-
-
+      <FilterSection filters={filters} items={items}
+     activeFilter={activeFilter} 
+    setActiveFilter={setActiveFilter}
+    onCardClick={(item) => router.push(`/services/${item.id}`)}
+    />
+    
       <ServicesBetter/>
 
   <div className="mb-12 ml-0 flex flex-col items-center gap-4 md:flex-row md:justify-start md:items-center md:ml-10">

@@ -67,16 +67,8 @@ export default function FilterSection({ filters, items, activeFilter,setActiveFi
         <div className="mt-[60px] lg:mt-[95px]" />
 
         <div className="flex justify-center">
-          <div className="w-full">
-            <div
-              className="
-                grid 
-                grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 
-                gap-[20px] p-[20px] 
-                lg:gap-x-[44px] lg:gap-y-[44px] lg:p-0
-                justify-center
-              "
-            >
+          <div className="w-full lg:w-[1234px]">
+            <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-[20px] p-[20px] lg:gap-x-[44px] lg:gap-y-[44px] lg:p-0 justify-center">
               {filteredItems.map((item) => (
                 <article
                   key={item.id}

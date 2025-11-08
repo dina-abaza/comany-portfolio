@@ -1,18 +1,19 @@
 export default function ServicesBetter() {
-    return (
-        <section className="w-full flex justify-center bg-transparent py-[20px] px-[10px]">
-            <div className="w-full flex flex-col items-center">
+  return (
+    <section className="w-full flex justify-center bg-transparent py-[20px] px-[10px]">
+      <div className="w-full  flex flex-col items-center">
 
-                {/* الصندوق الأبيض اللي فيه السؤال */}
-                <div className="w-full h-[50px] md:h-[80px] bg-white flex items-center justify-center">
-                    <h4 className="text[18px] md:text-[24px] font-semibold text-black text-center">
-                        WHY IS OUR SERVICES BETTER?
-                    </h4>
-                </div>
+        {/* الصندوق الأبيض اللي فيه السؤال */}
+        <div className="w-full  h-[50px] md:h-[80px] bg-white flex items-center justify-center">
+          <h4 className="text[18px] md:text-[24px] font-semibold text-black text-center">
+            WHY IS OUR SERVICES BETTER?
+          </h4>
+        </div>
 
                 <div className="mt-[20px] flex flex-col justify-start bg-[#3646d4]" />
 
-                {/* السيكشن الكبير بخلفية سوداء */}
+        {/* السيكشن الكبير بخلفية سوداء */}
+        <div className="w-full  bg-black flex flex-col justify-between mb-[100px] px-6 md:px-10 py-10 rounded-[8px]">
 
                 <div className="w-full flex flex-col justify-start">
                     <div className="w-full  max-w-[1268px]  flex flex-col justify-between mb-[100px] px-6 md:px-10 py-10 rounded-[8px]">
