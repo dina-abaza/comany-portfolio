@@ -7,10 +7,11 @@ import PrimaryButton from "@/components/buttons/PrimaryButton";
 import SecondaryButton from "@/components/buttons/SecondaryButton";
 import { useRouter } from "next/navigation";
 import ServiceFilterSection from "@/components/ServiceFilterSection";
-import { Suspense } from 'react'
+import { Suspense , useState } from 'react'
 
 export default function ServicesPage() {
   
+  const [activeFilter, setActiveFilter] = useState("all");
 
   const router = useRouter();
 
@@ -34,7 +35,7 @@ export default function ServicesPage() {
     { id: 9, category: "website", title: "LANDING PAGES", description: "High-conversion landing pages for marketing campaigns." ,image:"/service9.png"},
     { id: 10, category: "uiux", title: "PORTFOLIO DESIGN", description: "Elegant and clean portfolios for professionals." ,image:"/service10.png"},
     { id: 11, category: "maintenance", title: "SECURITY MONITORING", description: "Keep your app safe with constant protection and checks.",image:"/service11.png" },
-    { id: 12, category: "website", title: "BLOG SYSTEM", description: "Create and manage blog content easily." ,image:"/service1.png",image:"/service2.png"},
+    { id: 12, category: "website", title: "BLOG SYSTEM", description: "Create and manage blog content easily." ,image:"/service2.png"},
     { id: 13, category: "mobile", title: "SOCIAL MEDIA APP", description: "Custom platforms for community and content sharing." ,image:"/service13.png"},
     { id: 14, category: "uiux", title: "BRANDING & STYLE GUIDE", description: "Consistent visual identity across your products.",image:"/service14.png" },
     { id: 15, category: "maintenance", title: "PERFORMANCE OPTIMIZATION", description: "Make your website and app run faster and smoother.",image:"/service15.png" },
@@ -57,6 +58,8 @@ export default function ServicesPage() {
         <ServiceFilterSection
           filters={filters}
           items={items}
+          activeFilter={activeFilter}
+          setActiveFilter={(filter) => setActiveFilter(filter)}
           onCardClick={(item) => router.push(`/services/${item.id}`)}
         />
       </Suspense>
