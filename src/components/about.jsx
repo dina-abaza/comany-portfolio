@@ -1,5 +1,5 @@
 import PrimaryButton from './buttons/PrimaryButton';
-import SecondaryButton from "@/components/buttons/SecondaryButton";
+// import SecondaryButton from "@/components/buttons/SecondaryButton";
 import Header from './Header';
 const Com_AboutPage = () => {
     return (
@@ -12,52 +12,87 @@ const Com_AboutPage = () => {
 
 
             {/* Team Section */}
-            <section className="py-16 px-4 md:px-8 lg:px-16 bg-black">
-                <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-8">
+            <section className="py-16 px-04 md:px-8 lg:px-0 bg-black">
+                <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 lg:gap-9 gap-y-9 gap-x-[-30px]">
                     {/* الصف الأول */}
                     <div className="flex flex-col items-center">
-                        <img src="/team_photos/Ellipse 8-1.png" alt="Rachda Helmy" className="sm:w-[198px] sm:h-[198px] w-32 h-32 rounded-full object-cover border-2 border-[#10A700]" />
-                        <p className="mt-4 text-lg font-semibold">RAGHDA HELMY</p>
-                        <p className="text-sm text-gray-400">BACKEND DEVELOPER</p>
+
+                        <div className="w-32 h-32 sm:w-[198px] sm:h-[198px] rounded-full p-[4px] bg-gradient-to-r from-[#10A700] to-[#B8FF00]">
+                            <div className="w-full h-full rounded-full overflow-hidden border-[#10A700] bg-black">
+                                <img src="/team_photos/Ellipse 8-1.png" className="object-cover w-full h-full" />
+                            </div>
+                        </div>
+
+
+                        <p className="mt-4 text-lg font-semibold text-center">RAGHDA HELMY</p>
+                        <p className="text-sm text-gray-400 text-center">BACKEND DEVELOPER</p>
                     </div>
 
                     <div className="flex flex-col items-center">
-                        <img src="/team_photos/WhatsApp Image 2025-10-23 at 18.01.30_f7cf8215.jpg" alt="Dina Abaza" className="sm:w-[198px] sm:h-[198px] w-32 h-32 rounded-full object-cover border-2 border-[#10A700]" />
-                        <p className="mt-4 text-lg font-semibold">DINA ABAZA</p>
-                        <p className="text-sm text-gray-400">FRONTEND DEVELOPER</p>
+                        <div className="p-[3px] rounded-full bg-gradient-to-r from-[#10A700] to-[#B8FF00]">
+                            <div className="flex justify-center items-center rounded-full bg-white border-[#10A700] w-32 h-32 sm:w-[198px] sm:h-[198px] overflow-hidden">
+                                <img
+                                    src="/team_photos/WhatsApp Image 2025-10-23 at 18.01.30_f7cf8215.jpg"
+                                    alt="Dina Abaza"
+                                    className="object-contain sm:w-full sm:h-full sm:mt-[10px] w-[100px]"
+                                />
+                            </div>
+                        </div>
+
+                        <p className="mt-4 text-lg font-semibold text-center">DINA ABAZA</p>
+                        <p className="text-sm text-gray-400 text-center">FRONTEND DEVELOPER</p>
                     </div>
 
+
+
                     <div className="flex flex-col items-center">
-                        <img src="/team_photos/Ellipse 8-4.png" alt="Youssef Tame" className="sm:w-[198px] sm:h-[198px] w-32 h-32 rounded-full object-cover border-2 border-[#10A700]" />
-                        <p className="mt-4 text-lg font-semibold">YUSSEF TAIE</p>
-                        <p className="text-sm text-gray-400">SOFTWARE DEVELOPER</p>
+
+                        <div className="p-[3px] rounded-full bg-gradient-to-r from-[#10A700] to-[#B8FF00]">
+                            <div className="flex justify-center items-center rounded-full border-2 w-32 h-32 border-[#10A700] sm:w-[198px] sm:h-[198px] overflow-hidden">
+                                <img src="/team_photos/Ellipse 8-4.png" alt="Youssef Tame" className="object-cover w-full h-full" />
+                            </div>
+                        </div>
+                        <p className="mt-4 text-lg font-semibold text-center">YOSSEF TAME</p>
+                        <p className="text-sm text-gray-400 text-center">Flutter DEVELOPER</p>
                     </div>
 
                     {/* الصف الثاني */}
-                    <div className="flex flex-col items-center col-span-1 md:col-span-3 md:justify-self-center md:flex-row gap-16 lg:col-span-2  lg:justify-self-auto">
+                    <div className="flex sm:mt-12  mt-0 md:mt-0 flex-col items-center col-span-1 md:col-span-3 md:justify-self-center md:flex-row gap-22 lg:gap-9 lg:col-span-2  lg:justify-self-auto">
                         {/* رمضان */}
                         <div className="flex flex-col items-center">
-                            <img src="/team_photos/Ellipse 8-3.png" alt="Ramadan Mahdy" className=" sm:w-[198px] sm:h-[198px] w-32 h-32 rounded-full object-cover border-2 border-[#10A700]" />
-                            <p className="mt-4 text-lg font-semibold">RAMADAN MAHDY</p>
-                            <p className="text-sm text-gray-400">BACKEND DEVELOPER</p>
+                            <div className="p-[2px] rounded-full bg-gradient-to-r from-[#10A700] to-[#B8FF00]">
+                                <div className="flex justify-center items-center rounded-full border-2 border-[#10A700] w-32 h-32 sm:w-[198px] sm:h-[198px] overflow-hidden">
+                                    <img src="/team_photos/Ellipse 8-3.png" alt="Ramadan Mahdy" className="object-cover w-full h-full" />
+                                </div>
+                            </div>
+                            <p className="mt-4 text-lg font-semibold text-center">RAMADAN MAHDY</p>
+                            <p className="text-sm text-gray-400 text-center">Full Stack Developer</p>
                         </div>
 
                         {/* أحمد */}
                         <div className="flex flex-col hidden sm:block items-center">
-                            <img src="/team_photos/Ellipse 8-2.png" alt="Ahmed Saber" className="sm:w-[198px] sm:h-[198px] w-32 h-32 rounded-full object-cover border-2 border-[#10A700]" />
-                            <p className="mt-4 text-lg font-semibold">AHMED SABER</p>
-                            <p className="text-sm text-gray-400">UI/UX DESIGNER</p>
+                            <div className="p-[2px] rounded-full bg-gradient-to-r from-[#10A700] to-[#B8FF00]">
+                                <div className="flex justify-center items-center rounded-full border-2 bg-[#fff] border-[#10A700] w-32 h-32 sm:w-[198px] sm:h-[198px] overflow-hidden">
+                                    <img src="/team_photos/Ellipse 8-2.png" alt="Ahmed Saber" className="object-contain mt-10 object-[0%_100%] w-[160px] " />
+                                </div>
+                            </div>
+                            <p className="mt-4 text-lg text-center font-semibold">AHMED SABER</p>
+                            <p className="text-sm text-center text-gray-400">UI/UX DESIGNER</p>
                         </div>
-                    </div> 
+                    </div>
                     {/* أحمد */}
                     <div className="flex flex-col block sm:hidden col-span-2 items-center justify-center">
-                        <img src="/team_photos/Ellipse 8-2.png" alt="Ahmed Saber" className="sm:w-[198px] sm:h-[198px] w-32 h-32 rounded-full object-cover border-2 border-[#10A700]" />
-                        <p className="mt-4 text-lg font-semibold">AHMED SABER</p>
+                        <div className="p-[2px] rounded-full bg-gradient-to-r from-[#10A700] to-[#B8FF00]">
+                            <div className="flex justify-center items-center rounded-full border-2 border-[#10A700] bg-[#fff] w-32 h-32 sm:w-[198px] sm:h-[198px] overflow-hidden">
+                                <img src="/team_photos/Ellipse 8-2.png" alt="Ahmed Saber" className="object-contain mt-10 object-[0%_100%] w-[95px]" />
+                            </div>
+                        </div>
+                        <p className="mt-4 text-lg sm:ml-20 font-semibold">AHMED SABER</p>
                         <p className="text-sm text-gray-400">UI/UX DESIGNER</p>
                     </div>
                 </div>
             </section>
- 
+
 
             {/* Who We Are Section */}
             <section className="py-16 px-4 md:px-8 lg:px-16 bg-white text-black text-center">
@@ -119,7 +154,7 @@ const Com_AboutPage = () => {
             </section>
 
             {/* Why Choose Us Section */}
-            <section className="p-[100px] bg-[#000] border-b-[1px] border-[#fff] text-white text-center flex justify-center">
+            <section className="sm:p-[100px] p-[40px] bg-[#000] border-b-[1px] border-[#fff] text-white text-center flex justify-center">
                 <div className="w-[100%] lg:w-[80%]">
                     <h3 className="text-2xl font-bold mb-8">WHY CHOOSE US</h3>
                     <div className="grid grid-cols-1 md:grid-cols-3 justify-center gap-[44px]">
@@ -145,8 +180,8 @@ const Com_AboutPage = () => {
                 <div className="max-w-4xl mx-auto">
                     <h3 className="text-2xl font-bold mb-8">READY TO START WITH OUR TEAM? LET'S BUILD YOUR NEXT PROJECT TOGETHER.</h3>
                     <div className="flex justify-center gap-4">
-                        <PrimaryButton href={"/contact"} text= "START YOUR PROJECT NOW" />
-                        <SecondaryButton href={"/ourwork"} text= "CONTUCT US"/>
+                        <PrimaryButton href={"/contact"} text="START YOUR PROJECT NOW" />
+                        {/* <SecondaryButton href={"/ourwork"} text= "CONTUCT US"/> */}
                         {/* <button className="bg-[#10A700] text-black font-bold py-3 px-6 rounded-lg hover:bg-green-600 transition">START YOUR PROJECT NOW</button> */}
 
                     </div>

@@ -1,4 +1,5 @@
-"use client";
+"use client"
+
 import { useRouter } from "next/navigation";
 import PrimaryButton from "@/components/buttons/PrimaryButton";
 import FilterSection from "@/components/filtersection";

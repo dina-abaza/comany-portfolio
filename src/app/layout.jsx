@@ -4,8 +4,8 @@ import Footer from "@/components/Footer";
 
 
 export const metadata = {
-  title: "Aurora Software House",
-  description: "Modern web and mobile development company portfolio",
+    title: "Aurora Software House",
+    description: "Modern web and mobile development company portfolio",
 };
 
 export default function RootLayout({ children }) {

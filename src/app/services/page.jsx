@@ -1,5 +1,6 @@
-"use client";
-import FilterSection from "@/components/filtersection";
+'use client';
+
+
 import Header from "@/components/Header";
 import ServicesBetter from "@/components/servicesbetter";
 import PrimaryButton from "@/components/buttons/PrimaryButton";
