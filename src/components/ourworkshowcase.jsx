@@ -149,7 +149,7 @@ export default function OurWorkShowcase() {
       </section>
 
       {/* Problem & Solution Section */}
-      <section className="w-full flex justify-center bg-[#0C0C0C] py-[80px] px-[20px]">
+      <section className="w-full flex justify-center bg-[#0C0C0C] py-[20px] md:py-[80px] px-[20px]">
         <div className="w-full  mx-auto flex flex-col md:flex-row justify-between items-stretch gap-[30px] md:gap-[44px]">
 
           {/* Problem Statement */}
