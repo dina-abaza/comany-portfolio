@@ -7,6 +7,7 @@ import PrimaryButton from "@/components/buttons/PrimaryButton";
 import SecondaryButton from "@/components/buttons/SecondaryButton";
 import { useRouter, useSearchParams} from "next/navigation";
 import { useState, useEffect } from "react";
+import FilterSection from "@/components/filtersection";
 
 export default function ServicesPage() {
     const router = useRouter();

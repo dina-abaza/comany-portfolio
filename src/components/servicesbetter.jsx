@@ -55,6 +55,7 @@ export default function ServicesBetter() {
                     </div>
                 </div>
             </div>
+            </div>
         </section>
     );
 }
