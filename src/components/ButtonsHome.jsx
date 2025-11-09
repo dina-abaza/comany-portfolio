@@ -3,7 +3,7 @@ import SecondaryButton from "./buttons/SecondaryButton";
    
  export default function ButtonsHome(){
     return(
-<div className="flex justify-center items-center gap-5 md:gap-6  mx-4 md:mx-0">
+<div className="flex flex-col md:flex-row sm:flex-row justify-center items-center gap-5 md:gap-6  mx-4 md:mx-0">
           <PrimaryButton
            href="/contact" text= "START YOUR PROJECT NOW" />
           <SecondaryButton 

@@ -26,21 +26,18 @@ export default function Navbar() {
     { name: "CONTACT US", path: "/contact" },
   ];
 
-  // حذف HOME من نسخة التابلت
   const tabletLinks = links.filter((link) => link.name !== "HOME");
 
   return (
     <nav className="w-full flex flex-col items-center mt-10 relative z-10">
       {/* ===== Desktop Navbar (≥881px) ===== */}
       <div className="hidden lg:flex items-center justify-between w-full max-w-[965px] px-4 py-2 rounded-full shadow-4xl bg-black/40 backdrop-blur-md border border-white/30">
-        {/* Logo */}
         <div className="flex-shrink-0">
           <Link href="/" onClick={() => setActive(null)}>
             <img src="/logo.png" alt="Aurora Logo" className="w-[130px] h-auto" />
           </Link>
         </div>
 
-        {/* Links */}
         <ul className="flex items-center gap-4 text-[14px] font-medium tracking-wider">
           {links.map((link, i) => (
             <li key={i} className="relative">
@@ -65,7 +62,6 @@ export default function Navbar() {
                 )}
               </Link>
 
-              {/* Dropdown */}
               <AnimatePresence>
                 {link.dropdown && openDropdown === i && (
                   <motion.div
@@ -80,7 +76,7 @@ export default function Navbar() {
                       <Link
                         key={idx}
                         href={item.path}
-                         onClick={() => setOpenDropdown(null)}
+                        onClick={() => setOpenDropdown(null)}
                         className="w-[240px] h-[40px] mx-auto mb-2 last:mb-0 rounded-full flex items-center justify-center text-white bg-white/5 hover:bg-white/10 transition-colors duration-300"
                       >
                         {item.name}
@@ -96,7 +92,6 @@ export default function Navbar() {
 
       {/* ===== Tablet Navbar (880px - 768px) ===== */}
       <div className="hidden md:flex lg:hidden flex-col items-center w-full px-6 py-4">
-        {/* Logo */}
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -107,7 +102,6 @@ export default function Navbar() {
           </Link>
         </motion.div>
 
-        {/* Links */}
         <motion.ul
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -140,7 +134,6 @@ export default function Navbar() {
                 )}
               </div>
 
-              {/* Dropdown */}
               <AnimatePresence>
                 {link.dropdown && openDropdown === i && (
                   <motion.div
@@ -200,17 +193,25 @@ export default function Navbar() {
               <div key={i} className="w-full flex flex-col gap-2">
                 {link.dropdown ? (
                   <>
-                    <button
-                      onClick={() => setOpenDropdown(openDropdown === i ? null : i)}
-                      className="w-full flex justify-between items-center text-white font-medium py-2 px-3 rounded-full hover:bg-white/10 transition-colors"
-                    >
-                      {link.name}
+                    {/* ✅ تعديل بسيط هنا */}
+                    <div className="flex justify-between items-center">
+                      <Link
+                        href={link.path}
+                        onClick={() => setMobileMenu(false)}
+                        className="flex-1 text-left text-white font-medium py-2 px-3 rounded-full hover:bg-white/10 transition-colors"
+                      >
+                        {link.name}
+                      </Link>
                       <FaChevronDown
-                        className={`${
+                        onClick={() =>
+                          setOpenDropdown(openDropdown === i ? null : i)
+                        }
+                        className={`ml-2 text-[12px] text-white cursor-pointer transition-transform duration-300 ${
                           openDropdown === i ? "rotate-180" : ""
-                        } transition-transform duration-300`}
+                        }`}
                       />
-                    </button>
+                    </div>
+
                     <AnimatePresence>
                       {openDropdown === i && (
                         <motion.div

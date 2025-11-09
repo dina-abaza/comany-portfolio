@@ -72,9 +72,9 @@ export default function ServicesPage() {
     
       <ServicesBetter/>
 
-  <div className="mb-12 ml-0 flex flex-col items-center gap-4 md:flex-row md:justify-start md:items-center md:ml-10">
+  <div className="mt-8 md:mt-12 mb-12 ml-0 flex flex-col items-center gap-4 md:flex-row md:justify-start md:items-center md:ml-10">
   <PrimaryButton href={"/contact"} text= "START YOUR PROJECT NOW" />
-  <SecondaryButton href={"/ourwork"} text= "CONTUCT US"/>
+  <SecondaryButton href={"/ourwork"} text= "CONTACT US"/>
 </div>
 
     </main>
