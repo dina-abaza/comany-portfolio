@@ -9,6 +9,7 @@ import { useRouter, useSearchParams} from "next/navigation";
 import { useState, useEffect } from "react";
 import FilterSection from "@/components/filtersection";
 
+
 export default function ServicesPage() {
     const router = useRouter();
    const searchParams = useSearchParams();
