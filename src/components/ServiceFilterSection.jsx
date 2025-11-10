@@ -3,7 +3,7 @@ import { useState , useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import FilterSection from "./filtersection";
 
-export default function ServiceFilterSection({ filters, items, activeFilter , setActiveFilter,onCardClick }) {
+export default function ServiceFilterSection({ filters, items ,onCardClick }) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const initialFilter = searchParams.get("filter") || "all";
@@ -21,7 +21,7 @@ export default function ServiceFilterSection({ filters, items, activeFilter , se
       filters={filters}
       items={items}
       activeFilter={activeFilters} 
-      setActiveFilter={setActiveFilter}
+    //   setActiveFilter={setActiveFilters}
       onCardClick={onCardClick}
     />
   );

@@ -67,7 +67,7 @@ export default function FilterSection({ filters, items, activeFilter,setActiveFi
         <div className="mt-[60px] lg:mt-[95px]" />
 
         <div className="flex justify-center">
-          <div className="w-full lg:w-[1234px]">
+          <div className="w-full lg:mx-6">
             <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-[20px] p-[20px] lg:gap-x-[44px] lg:gap-y-[44px] lg:p-0 justify-center">
               {filteredItems.map((item) => (
                 <article
@@ -80,7 +80,9 @@ export default function FilterSection({ filters, items, activeFilter,setActiveFi
                     height: "240px",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
-                  }}
+                }}
+                
+                loading="lazy" 
                 >
                   <div
                     className="absolute bottom-0 left-0 w-full flex flex-col justify-center px-[12px] sm:px-[16px] md:px-[20px] transition-all duration-500 group-hover:bg-white/10 rounded-b-[12px]"

@@ -36,7 +36,7 @@ export default function Navbar() {
         {/* Logo */}
         <div className="flex-shrink-0">
           <Link href="/" onClick={() => setActive(null)}>
-            <img src="/logo.png" alt="Aurora Logo" className="w-[130px] h-auto" />
+            <img src="/logo/aurora.svg" alt="Aurora Logo" className="w-[130px] h-auto" />
           </Link>
         </div>
 
@@ -103,7 +103,7 @@ export default function Navbar() {
           transition={{ duration: 0.4 }}
         >
           <Link href="/" onClick={() => setActive(null)}>
-            <img src="/logo.png" alt="Aurora Logo" className="w-[150px] mb-8" />
+            <img src="/logo/aurora.svg" alt="Aurora Logo" className="w-[150px] mb-8" />
           </Link>
         </motion.div>
 
@@ -172,7 +172,7 @@ export default function Navbar() {
       {/* ===== Mobile Navbar (≤767px) ===== */}
       <div className="flex md:hidden items-center justify-between w-full px-6 py-3">
         <Link href="/" onClick={() => setActive(null)}>
-          <img src="/logo.png" alt="Aurora Logo" className="w-[110px]" />
+          <img src="/logo/aurora.svg" alt="Aurora Logo" className="w-[110px]" />
         </Link>
 
         <button onClick={() => setMobileMenu(!mobileMenu)} className="text-white">

@@ -10,9 +10,9 @@ body {
 
 .herosection {
     display: flex;
-    flex-direction: row;
     gap : 100px;
     height: 554px;
+    width: 100%;
     align-items: center;
     justify-content: center;    
 }
@@ -44,8 +44,10 @@ body {
 }
 
 .imghoc img{
-    width: 670px;
+    width: 674px;
+    height: 400px;
     border-radius: 16px;
+    object-fit: cover;
 }
 
 .whitesection{
@@ -238,4 +240,241 @@ body {
     justify-content: center;
     gap: 32px;
 
+}
+
+
+/* =======================
+   📱 MOBILE RESPONSIVE
+   ======================= */
+@media (max-width: 1450px) {
+
+  .herosection {
+    flex-direction: column-reverse;
+    gap: 48px;
+    height: auto;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .texthoc {
+    align-items: center;
+    gap: 24px;
+  }
+
+  .texthoc h1 {
+    font-size: 22px;
+    line-height: 1.4;
+  }
+
+  .texthoc h4 {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .imghoc img {
+    max-width: 340px;
+    border-radius: 12px;
+  }
+
+  .whitesection {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .whitesection p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  /* WHY section */
+.whySection {
+  width: 90%;
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  box-sizing: border-box;
+}
+.whySection h1 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* cards: two per row on mobile (calc with gap) */
+.whyCards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 4px;
+}
+.whySection h1{
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.card {
+  background-color: #fff;
+  color: #121111;
+  width: calc(50% - 14px);
+  min-width: 140px;
+  border-radius: 14px;
+  padding: 12px;
+  box-sizing: border-box;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: center;
+  height: auto;
+}
+
+/* make icon above text in card */
+.card img {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+.card h4 {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+}
+.ourProcess {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 48px 20px;
+  
+}
+
+  .ourProcess h1 {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+.processCards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3px;
+    margin: 16px;
+}
+
+  .singlecard {
+    width: 200px;
+    padding: 8px;
+    gap: 12px;
+    height: 120px;
+  }
+
+  .singlecard h2 {
+    font-size: 16px;
+  }
+
+  .singlecard p {
+    font-size: 14px;
+    text-transform: capitalize;
+  }
+
+  .technologies {
+    margin: 60px 0;
+    padding: 0 20px;
+  }
+
+  .mainTech {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  .content {
+    flex-direction: row;
+    padding: 14px;
+    text-align: center;
+  }
+
+  .content img {
+    width: 74px;
+  }
+
+  .sidecontent {
+    margin-left: 10;
+    align-items: start;
+  }
+
+  .titleshub {
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    gap: 8px;
+    
+    justify-content: start;
+  }
+
+  .titles {
+    height: auto;
+    padding: 4.5px 8px;
+    border-width: 0.32px;
+    border-radius: 8px;
+  }
+
+  .titles h2 {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+
+  .icons {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .icons img {
+    width: 20px;
+  }
+
+  .buttonsFot {
+    flex-direction: row;
+    gap: 16px;
+    padding: 40px 0;
+  }
+}
+
+/* Optional: for very small phones */
+@media (max-width: 480px) {
+  .texthoc h1 {
+    font-size: 20px;
+  }
+
+  .texthoc h4 {
+    font-size: 14px;
+  }
+
+  .whitesection p {
+    font-size: 16px;
+  }
+
+  .singlecard h2 {
+    font-size: 16px;
+  }
+
+  .singlecard p {
+    font-size: 13px;
+  }
 }

@@ -37,7 +37,7 @@ export default function OurWorkShowcase() {
     <>
       {/* Showcase Section */}
       <section className="w-full flex justify-center bg-[#0C0C0C] py-[60px] px-[20px]">
-        <div className="w-full max-w-[400px] sm:max-w-[600px] md:max-w-[1269px] mx-auto flex flex-col gap-[20px] md:gap-[44px]">
+        <div className="w-full lg:max-w-[1550px] mx-auto flex flex-col gap-[20px] md:gap-[44px]">
 
           {/* Row 1: Main Image & Video */}
           <div className="flex justify-between items-center gap-2 md:gap-6">
@@ -213,7 +213,7 @@ export default function OurWorkShowcase() {
       </section>
 
       {/* Technology Used */}
-      <section className="relative z-50 w-full max-w-[1268px] mx-auto h-[286px] bg-white flex flex-col items-center justify-center px-[40px] md:px-[27px] py-[40px] md:py-[72px] mt-[40px] md:mt-[72px]">
+      <section className="relative z-50 w-full mx-auto h-[286px] bg-white flex flex-col items-center justify-center px-[40px] md:px-[27px] py-[40px] md:py-[72px] mt-[40px] md:mt-[72px]">
         <h2 className="w-full text-[16px] sm:text-[24px] md:text-[24px] lg:text-[30px] font-bold text-center mb-[24px] sm:mb-[40px] md:mb-[72px] text-black">
           Technology Used
         </h2>
